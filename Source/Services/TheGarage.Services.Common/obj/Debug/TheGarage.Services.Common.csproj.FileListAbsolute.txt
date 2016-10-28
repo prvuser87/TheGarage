@@ -1,0 +1,4 @@
+C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Common\bin\Debug\TheGarage.Services.Common.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Common\bin\Debug\TheGarage.Services.Common.pdb
+C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Common\obj\Debug\TheGarage.Services.Common.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Common\obj\Debug\TheGarage.Services.Common.pdb

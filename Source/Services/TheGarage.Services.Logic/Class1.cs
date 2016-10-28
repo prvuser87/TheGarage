@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheGarage.Web.Common
+namespace TheGarage.Services.Logic
 {
     public class Class1
     {
