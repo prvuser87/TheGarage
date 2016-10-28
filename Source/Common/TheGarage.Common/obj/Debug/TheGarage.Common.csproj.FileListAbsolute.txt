@@ -1,0 +1,4 @@
+C:\Projects\Source\Common\TheGarage.Common\bin\Debug\TheGarage.Common.dll
+C:\Projects\Source\Common\TheGarage.Common\bin\Debug\TheGarage.Common.pdb
+C:\Projects\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.dll
+C:\Projects\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.pdb

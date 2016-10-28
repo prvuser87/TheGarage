@@ -1,0 +1,4 @@
+C:\Projects\Source\Web\TheGarage.Web.Common\bin\Debug\TheGarage.Web.Common.dll
+C:\Projects\Source\Web\TheGarage.Web.Common\bin\Debug\TheGarage.Web.Common.pdb
+C:\Projects\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.dll
+C:\Projects\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.pdb

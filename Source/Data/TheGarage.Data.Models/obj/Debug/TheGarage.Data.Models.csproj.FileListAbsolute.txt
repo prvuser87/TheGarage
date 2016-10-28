@@ -1,0 +1,16 @@
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\TheGarage.Data.Models.dll.config
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\TheGarage.Data.Models.dll
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\TheGarage.Data.Models.pdb
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\EntityFramework.dll
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\TheGarage.Data.Common.dll
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\TheGarage.Data.Common.pdb
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\EntityFramework.xml
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\Source\Data\TheGarage.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\Source\Data\TheGarage.Data.Models\obj\Debug\TheGarage.Data.Models.csprojResolveAssemblyReference.cache
+C:\Projects\Source\Data\TheGarage.Data.Models\obj\Debug\TheGarage.Data.Models.dll
+C:\Projects\Source\Data\TheGarage.Data.Models\obj\Debug\TheGarage.Data.Models.pdb

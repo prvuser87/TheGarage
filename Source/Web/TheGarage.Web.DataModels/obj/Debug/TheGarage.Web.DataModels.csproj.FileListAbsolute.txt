@@ -1,0 +1,4 @@
+C:\Projects\Source\Web\TheGarage.Web.DataModels\bin\Debug\TheGarage.Web.DataModels.dll
+C:\Projects\Source\Web\TheGarage.Web.DataModels\bin\Debug\TheGarage.Web.DataModels.pdb
+C:\Projects\Source\Web\TheGarage.Web.DataModels\obj\Debug\TheGarage.Web.DataModels.dll
+C:\Projects\Source\Web\TheGarage.Web.DataModels\obj\Debug\TheGarage.Web.DataModels.pdb

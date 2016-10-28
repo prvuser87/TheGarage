@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Web", "Web\TheGarage.Web\TheGarage.Web.csproj", "{0896DD54-2855-43C8-95AC-30D1AEEB0116}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{BC6F93E9-3730-4564-B3C6-4C30A33B3EB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Web.Infrastructure", "Web\TheGarage.Web.Infrastructure\TheGarage.Web.Infrastructure.csproj", "{2FDC2EC9-9FB8-4851-B7F0-38DC9C357F5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9AD8D462-D2C7-43A6-AB7C-9D3D61ABF63C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F6CD3E44-7C41-41CE-833C-C26C7EFBF8A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Data", "Data\TheGarage.Data\TheGarage.Data.csproj", "{FFF478A8-0701-401B-96C0-79180C47E8BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{66DC5F2D-78BC-4A3B-9A2D-E20036465A8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Common", "Common\TheGarage.Common\TheGarage.Common.csproj", "{A535B201-3A5F-40C8-AE6E-A4731FCCBF0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Data.Models", "Data\TheGarage.Data.Models\TheGarage.Data.Models.csproj", "{1FE11A32-1188-407A-A47A-18BDD2DBAC76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Data.Common", "Data\TheGarage.Data.Common\TheGarage.Data.Common.csproj", "{B44432EB-73AC-4BA8-AF37-BD8F8FEBA508}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Web.DataModels", "Web\TheGarage.Web.DataModels\TheGarage.Web.DataModels.csproj", "{047673AD-C06A-4DEE-8174-3CB60BE107A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Web.Common", "Web\TheGarage.Web.Common\TheGarage.Web.Common.csproj", "{4F059AC2-D39A-4450-82CE-289795EAB9C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0896DD54-2855-43C8-95AC-30D1AEEB0116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0896DD54-2855-43C8-95AC-30D1AEEB0116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0896DD54-2855-43C8-95AC-30D1AEEB0116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0896DD54-2855-43C8-95AC-30D1AEEB0116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDC2EC9-9FB8-4851-B7F0-38DC9C357F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDC2EC9-9FB8-4851-B7F0-38DC9C357F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDC2EC9-9FB8-4851-B7F0-38DC9C357F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDC2EC9-9FB8-4851-B7F0-38DC9C357F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF478A8-0701-401B-96C0-79180C47E8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF478A8-0701-401B-96C0-79180C47E8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF478A8-0701-401B-96C0-79180C47E8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF478A8-0701-401B-96C0-79180C47E8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A535B201-3A5F-40C8-AE6E-A4731FCCBF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A535B201-3A5F-40C8-AE6E-A4731FCCBF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A535B201-3A5F-40C8-AE6E-A4731FCCBF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A535B201-3A5F-40C8-AE6E-A4731FCCBF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE11A32-1188-407A-A47A-18BDD2DBAC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE11A32-1188-407A-A47A-18BDD2DBAC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE11A32-1188-407A-A47A-18BDD2DBAC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE11A32-1188-407A-A47A-18BDD2DBAC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44432EB-73AC-4BA8-AF37-BD8F8FEBA508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44432EB-73AC-4BA8-AF37-BD8F8FEBA508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44432EB-73AC-4BA8-AF37-BD8F8FEBA508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44432EB-73AC-4BA8-AF37-BD8F8FEBA508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047673AD-C06A-4DEE-8174-3CB60BE107A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047673AD-C06A-4DEE-8174-3CB60BE107A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047673AD-C06A-4DEE-8174-3CB60BE107A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047673AD-C06A-4DEE-8174-3CB60BE107A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F059AC2-D39A-4450-82CE-289795EAB9C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F059AC2-D39A-4450-82CE-289795EAB9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F059AC2-D39A-4450-82CE-289795EAB9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F059AC2-D39A-4450-82CE-289795EAB9C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0896DD54-2855-43C8-95AC-30D1AEEB0116} = {BC6F93E9-3730-4564-B3C6-4C30A33B3EB1}
+		{2FDC2EC9-9FB8-4851-B7F0-38DC9C357F5A} = {BC6F93E9-3730-4564-B3C6-4C30A33B3EB1}
+		{FFF478A8-0701-401B-96C0-79180C47E8BE} = {F6CD3E44-7C41-41CE-833C-C26C7EFBF8A6}
+		{A535B201-3A5F-40C8-AE6E-A4731FCCBF0A} = {66DC5F2D-78BC-4A3B-9A2D-E20036465A8E}
+		{1FE11A32-1188-407A-A47A-18BDD2DBAC76} = {F6CD3E44-7C41-41CE-833C-C26C7EFBF8A6}
+		{B44432EB-73AC-4BA8-AF37-BD8F8FEBA508} = {F6CD3E44-7C41-41CE-833C-C26C7EFBF8A6}
+		{047673AD-C06A-4DEE-8174-3CB60BE107A0} = {BC6F93E9-3730-4564-B3C6-4C30A33B3EB1}
+		{4F059AC2-D39A-4450-82CE-289795EAB9C8} = {BC6F93E9-3730-4564-B3C6-4C30A33B3EB1}
+	EndGlobalSection
+EndGlobal
