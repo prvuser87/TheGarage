@@ -14,5 +14,7 @@ namespace TheGarage.Web.Controllers.Base
         }
 
         protected IUsersService UsersService { get; private set; }
+
+        
     }
 }

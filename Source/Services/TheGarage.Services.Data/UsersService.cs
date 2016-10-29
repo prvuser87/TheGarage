@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheGarage.Data;
 using TheGarage.Data.Common.Repositories;
 using TheGarage.Data.Models;
+using TheGarage.Services.Common.Extensions;
 using TheGarage.Services.Data.Contracts;
 
 namespace TheGarage.Services.Data
 {
     public class UsersService : IUsersService
     {
-        private readonly IRepository<User> users;
-        public UsersService(IRepository<User> users)
+        private readonly ITheGarageData data;
+        public UsersService(ITheGarageData data)
         {
-            this.users = users;
+            this.data = data;
         }
 
         public IQueryable<User> ByUsername(string username)
         {
-            return this.users
+            //this.data.ChangeDatabaseTo("ForDelTestOnly");
+            return this.data
+                .Users
                 .All()
                 .Where(u => u.UserName == username);
         }
@@ -39,19 +43,20 @@ namespace TheGarage.Services.Data
             user.Phone = Phone;
             user.About = About;
 
-            this.users.Update(user);
-            this.users.SaveChanges();
+            this.data.Users.Update(user);
+            this.data.Users.SaveChanges();
         }
 
         public void DeleteUser(User user)
         {
-            this.users.Delete(user);
-            this.users.SaveChanges();
+            this.data.Users.Delete(user);
+            this.data.Users.SaveChanges();
         }
 
         public IQueryable<User> QueriedAllUsers()
         {
-            var query = this.users
+            var query = this.data
+                .Users
                 .All()
                 .Where(p => !p.IsHidden);
             return query;
@@ -59,7 +64,8 @@ namespace TheGarage.Services.Data
 
         public User FindUserById(string key)
         {
-            return this.users
+            return this.data
+                .Users
                 .All()
                 .FirstOrDefault(k => k.Id == key);
         }
@@ -98,7 +104,8 @@ namespace TheGarage.Services.Data
 
         private User GetLocalAccount(string emailOrUserName)
         {
-            return this.users
+            return this.data
+                .Users
                 .All()
                 .FirstOrDefault(u => u.Email == emailOrUserName || u.UserName == emailOrUserName);
         }

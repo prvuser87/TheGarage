@@ -70,6 +70,10 @@
       <Project>{1fe11a32-1188-407a-a47a-18bdd2dbac76}</Project>
       <Name>TheGarage.Data.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Data\TheGarage.Data\TheGarage.Data.csproj">
+      <Project>{fff478a8-0701-401b-96c0-79180c47e8be}</Project>
+      <Name>TheGarage.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TheGarage.Services.Common\TheGarage.Services.Common.csproj">
       <Project>{a7f90df9-5069-4ead-b393-51429c11ba90}</Project>
       <Name>TheGarage.Services.Common</Name>

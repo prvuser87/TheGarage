@@ -57,11 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITheGarageData.cs" />
+    <Compile Include="ITheGarageDbContext.cs" />
     <Compile Include="Migrations\201610281248242_InitialCreate.cs" />
     <Compile Include="Migrations\201610281248242_InitialCreate.Designer.cs">
       <DependentUpon>201610281248242_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="TheGarageData.cs" />
     <Compile Include="TheGarageDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
