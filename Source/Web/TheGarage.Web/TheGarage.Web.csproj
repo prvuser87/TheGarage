@@ -221,6 +221,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -323,6 +324,10 @@
     <ProjectReference Include="..\..\Services\TheGarage.Services.Common\TheGarage.Services.Common.csproj">
       <Project>{a7f90df9-5069-4ead-b393-51429c11ba90}</Project>
       <Name>TheGarage.Services.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\TheGarage.Services.Data\TheGarage.Services.Data.csproj">
+      <Project>{930a700e-defb-47fe-8c42-5048565cfbdf}</Project>
+      <Name>TheGarage.Services.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Services\TheGarage.Services.Logic\TheGarage.Services.Logic.csproj">
       <Project>{e2b26380-5e49-475d-b2bb-7b21b8a1f265}</Project>

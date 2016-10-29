@@ -153,6 +153,7 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Dat
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Data.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Data.Models.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Services.Common.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Services.Data.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Services.Logic.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Web.Common.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Web.DataModels.dll
@@ -164,6 +165,7 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Dat
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Data.Models.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Data.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Services.Common.pdb
+C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Services.Data.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Services.Logic.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Web.Common.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\TheGarage.Web.DataModels.pdb
