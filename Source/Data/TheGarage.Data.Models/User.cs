@@ -1,23 +1,29 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-using TheGarage.Data.Common.Models;
-
-namespace TheGarage.Data.Models
+﻿namespace TheGarage.Data.Models
 {
-    public class User : IdentityUser, IDeletableEntity
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+
+    using Common.Models;
+
+
+    public class User : IdentityUser, IAuditInfo, IDeletableEntity
     {
+        private ICollection<Client> clients;
+        private ICollection<AccessLog> accessLog;
 
         public User()
         {
             // This will prevent UserManager.CreateAsync from causing exception
             this.CreatedOn = DateTime.Now;
+            this.clients = new HashSet<Client>();
+            this.accessLog = new HashSet<AccessLog>();
         }
 
         [MaxLength(100)]
@@ -46,6 +52,10 @@ namespace TheGarage.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
+        public virtual ICollection<Client> Clients { get; set; }
+
+        public virtual ICollection<AccessLog> AccessLogs { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -55,4 +65,3 @@ namespace TheGarage.Data.Models
         }
     }
 }
-

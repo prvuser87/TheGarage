@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using TheGarage.Data;
-using TheGarage.Data.Common.Repositories;
 using TheGarage.Data.Models;
-using TheGarage.Services.Common.Extensions;
 using TheGarage.Services.Data.Contracts;
 
 namespace TheGarage.Services.Data

@@ -4,19 +4,17 @@
 namespace TheGarage.Web.App_Start
 {
     using System;
+    using System.Data.Entity;
     using System.Web;
-
+    using Data;
+    using Data.Common.Repositories;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
     using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;
-    using Data.Common.Repositories;
-    using System.Data.Entity;
-    using Data;
-    using Services.Logic;
-    using Services.Common;
 
+    using Services.Common;
     using ServerConstants = TheGarage.Web.Common.Constants;
 
     public static class NinjectWebCommon 

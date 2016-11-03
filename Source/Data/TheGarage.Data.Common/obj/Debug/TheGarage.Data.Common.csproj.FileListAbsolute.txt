@@ -12,3 +12,16 @@ C:\Projects\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identit
 C:\Projects\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.csprojResolveAssemblyReference.cache
 C:\Projects\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.dll
 C:\Projects\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.pdb
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\TheGarage.Data.Common.dll.config
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\TheGarage.Data.Common.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\TheGarage.Data.Common.pdb
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.pdb

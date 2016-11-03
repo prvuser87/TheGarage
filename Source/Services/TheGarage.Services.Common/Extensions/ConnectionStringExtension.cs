@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using TheGarage.Data;
-
-namespace TheGarage.Services.Common.Extensions
+﻿namespace TheGarage.Services.Common.Extensions
 {
+    using System.Text.RegularExpressions;
+    using TheGarage.Data;
+
     public static class ConnectionStringExtension
     {
         public static void ChangeDatabaseTo(this ITheGarageData db, string newDatabaseName)

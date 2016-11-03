@@ -3,10 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
-    using System.Linq;
-    using TheGarage.Data.Common.Models;
-    using TheGarage.Data.Common.Repositories;
-    using TheGarage.Data.Models;
+    using Common.Models;
+    using Common.Repositories;
+    using Models;
 
     public class TheGarageData : ITheGarageData
     {
@@ -39,7 +38,71 @@
                 return this.GetRepository<User>();
             }
         }
-        
+
+        public IDeletableEntityRepository<AccessLog> AccessLogs
+        {
+            get
+            {
+                return this.GetRepository<AccessLog>();
+            }
+        }
+
+        public IDeletableEntityRepository<Client> Clients
+        {
+            get
+            {
+                return this.GetRepository<Client>();
+            }
+        }
+
+        public IDeletableEntityRepository<Company> Companies
+        {
+            get
+            {
+                return this.GetRepository<Company>();
+            }
+        }
+
+        public IDeletableEntityRepository<GeneratedPassword> GeneratedPasswords
+        {
+            get
+            {
+                return this.GetRepository<GeneratedPassword>();
+            }
+        }
+
+        public IDeletableEntityRepository<Promotion> Promotions
+        {
+            get
+            {
+                return this.GetRepository<Promotion>();
+            }
+        }
+
+        public IDeletableEntityRepository<RequestedGarage> RequestedGarages
+        {
+            get
+            {
+                return this.GetRepository<RequestedGarage>();
+            }
+        }
+
+        public IDeletableEntityRepository<Transaction> Transactions
+        {
+            get
+            {
+                return this.GetRepository<Transaction>();
+            }
+        }
+
+        public IDeletableEntityRepository<Garage> Garages
+        {
+            get
+            {
+                return this.GetRepository<Garage>();
+            }
+        }
+
         public void SaveChanges()
         {
             try

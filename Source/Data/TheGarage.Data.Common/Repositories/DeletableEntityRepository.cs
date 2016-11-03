@@ -1,12 +1,11 @@
-﻿using TheGarage.Data.Common;
-using TheGarage.Data.Common.Models;
-
-namespace TheGarage.Data.Common.Repositories
+﻿namespace TheGarage.Data.Common.Repositories
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     using System.Linq;
+
+    using Models;
 
     public class DeletableEntityRepository<T> : EfGenericRepository<T>, IDeletableEntityRepository<T>
         where T : class, IDeletableEntity

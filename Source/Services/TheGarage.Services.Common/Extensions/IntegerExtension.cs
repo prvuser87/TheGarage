@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheGarage.Services.Common.Extensions
+﻿namespace TheGarage.Services.Common.Extensions
 {
+    using System;
+
     public static class IntegerExtension
     {
         public static string ToMonthName(this int monthIndex)
@@ -14,7 +9,7 @@ namespace TheGarage.Services.Common.Extensions
             switch (monthIndex)
             {
                 case 1: return "January";
-                case 2:return "February";
+                case 2: return "February";
                 case 3: return "March";
                 case 4: return "April";
                 case 5: return "May";
@@ -34,6 +29,5 @@ namespace TheGarage.Services.Common.Extensions
         {
             return string.Format("{0}/{1}", id % Constants.SavedFilesSubfoldersCount, string.Format("{0}{1}", id.ToMd5Hash().Substring(0, Constants.FileHashLength), id));
         }
-
     }
 }

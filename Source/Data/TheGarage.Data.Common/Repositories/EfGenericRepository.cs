@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using TheGarage.Data.Common;
-
-namespace TheGarage.Data.Common.Repositories
+﻿namespace TheGarage.Data.Common.Repositories
 {
     using System;
     using System.Data.Entity;

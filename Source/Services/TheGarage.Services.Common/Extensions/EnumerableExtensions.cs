@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheGarage.Services.Common.Extensions
+﻿namespace TheGarage.Services.Common.Extensions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+
     public static class EnumerableExtensions
     {
         public static void ForEach<T>(this IEnumerable<T> values, Action<T> action)
         {
-            if (values == null) return;
+            if (values == null)
+            {
+                return;
+            }
 
             foreach (var item in values)
             {
@@ -39,6 +41,6 @@ namespace TheGarage.Services.Common.Extensions
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> items)
         {
             return new HashSet<T>(items);
-        } 
+        }
     }
 }

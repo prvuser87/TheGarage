@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using TheGarage.Data.Common.Models;
-using TheGarage.Data.Models;
-
-namespace TheGarage.Data
+﻿namespace TheGarage.Data
 {
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
+    using System.Linq;
+    using Common.Models;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
+
     public class TheGarageDbContext : IdentityDbContext<User>
     {
         public TheGarageDbContext()
@@ -15,6 +15,22 @@ namespace TheGarage.Data
         {
 
         }
+
+        public IDbSet<AccessLog> AccessLogs { get; set; }
+
+        public IDbSet<Client> Clients { get; set; }
+
+        public IDbSet<Company> Companies { get; set; }
+
+        public IDbSet<Garage> Garages { get; set; }
+
+        public IDbSet<GeneratedPassword> GeneratedPasswords { get; set; }
+
+        public IDbSet<Promotion> Promotions { get; set; }
+
+        public IDbSet<RequestedGarage> RequestedGarages { get; set; }
+
+        public IDbSet<Transaction> Transactions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -36,11 +52,14 @@ namespace TheGarage.Data
         public override int SaveChanges()
         {
             this.ApplyAuditInfoRules();
+            this.ApplyDeletableEntityRules();
             return base.SaveChanges();
         }
 
         private void ApplyAuditInfoRules()
         {
+            // Approach via @julielerman: http://bit.ly/123661P
+
             var changedAudits = this.ChangeTracker.Entries()
                     .Where(e => e.Entity is IAuditInfo && ((e.State == EntityState.Added) || (e.State == EntityState.Modified)));
 
@@ -59,6 +78,22 @@ namespace TheGarage.Data
                 {
                     entity.ModifiedOn = DateTime.Now;
                 }
+            }
+        }
+
+        private void ApplyDeletableEntityRules()
+        {
+            // Approach via @julielerman: http://bit.ly/123661P
+            foreach (
+                var entry in
+                    this.ChangeTracker.Entries()
+                        .Where(e => e.Entity is IDeletableEntity && (e.State == EntityState.Deleted)))
+            {
+                var entity = (IDeletableEntity)entry.Entity;
+
+                entity.DeletedOn = DateTime.Now;
+                entity.IsDeleted = true;
+                entry.State = EntityState.Modified;
             }
         }
     }
