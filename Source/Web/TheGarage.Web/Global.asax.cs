@@ -15,8 +15,8 @@ namespace TheGarage.Web
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
 
-           // Database.SetInitializer(new MigrateDatabaseToLatestVersion<TheGarageDbContext, Configuration>());
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<TheGarageDbContext>());
+             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TheGarageDbContext, Configuration>());
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<TheGarageDbContext>());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

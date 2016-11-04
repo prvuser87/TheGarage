@@ -65,6 +65,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\TheGarage.Common\TheGarage.Common.csproj">
+      <Project>{a535b201-3a5f-40c8-ae6e-a4731fccbf0a}</Project>
+      <Name>TheGarage.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TheGarage.Data.Common\TheGarage.Data.Common.csproj">
       <Project>{b44432eb-73ac-4ba8-af37-bd8f8feba508}</Project>
       <Name>TheGarage.Data.Common</Name>
