@@ -22,5 +22,18 @@ namespace TheGarage.Web.Controllers
 
             return View();
         }
+        public ActionResult TempDataTest()
+        {
+            if (this.TempData["SuccessMessage"] == null)
+            {
+                this.TempData["SuccessMessage"] == "Succes!";
+            }
+            var data = this.TempData["SuccessMessage"];
+
+            return View(data);
+        } 
+
     }
+
+
 }
