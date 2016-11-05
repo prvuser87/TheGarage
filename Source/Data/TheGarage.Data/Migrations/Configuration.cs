@@ -45,10 +45,7 @@ namespace TheGarage.Data.Migrations
 
         private void SeedUsers(TheGarageDbContext context)
         {
-            if (context.Users.Any())
-            {
-                return;
-            }
+            
             var names = GetUserNames();
 
             var userManager = new UserManager<User>(new UserStore<User>(context));
