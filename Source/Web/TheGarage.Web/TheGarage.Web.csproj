@@ -18,8 +18,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort>
-    </IISExpressSSLPort>
+    <IISExpressSSLPort>44328</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -233,7 +232,6 @@
     <Compile Include="Areas\Administration\ViewModels\AdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\UsersAdministrationViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Base\BaseAuthorizationController.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -513,25 +511,29 @@
       <Project>{fff478a8-0701-401b-96c0-79180c47e8be}</Project>
       <Name>TheGarage.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services\TheGarage.Services.Administration\TheGarage.Services.Administration.csproj">
+      <Project>{c5ff5161-0332-4f20-9ac3-f453e0052588}</Project>
+      <Name>TheGarage.Services.Administration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Services\TheGarage.Services.Common\TheGarage.Services.Common.csproj">
       <Project>{a7f90df9-5069-4ead-b393-51429c11ba90}</Project>
       <Name>TheGarage.Services.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Services\TheGarage.Services.Data\TheGarage.Services.Data.csproj">
-      <Project>{930a700e-defb-47fe-8c42-5048565cfbdf}</Project>
-      <Name>TheGarage.Services.Data</Name>
+    <ProjectReference Include="..\..\Services\TheGarage.Services.Garages\TheGarage.Services.Garages.csproj">
+      <Project>{78f5517a-4042-426f-95e4-34b5e9515169}</Project>
+      <Name>TheGarage.Services.Garages</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Services\TheGarage.Services.Logic\TheGarage.Services.Logic.csproj">
       <Project>{e2b26380-5e49-475d-b2bb-7b21b8a1f265}</Project>
       <Name>TheGarage.Services.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services\TheGarage.Services.Users\TheGarage.Services.Users.csproj">
+      <Project>{23fad815-5391-4569-99df-f566f8ecd3b3}</Project>
+      <Name>TheGarage.Services.Users</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TheGarage.Web.Common\TheGarage.Web.Common.csproj">
       <Project>{4f059ac2-d39a-4450-82ce-289795eab9c8}</Project>
       <Name>TheGarage.Web.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TheGarage.Web.DataModels\TheGarage.Web.DataModels.csproj">
-      <Project>{047673ad-c06a-4dee-8174-3cb60be107a0}</Project>
-      <Name>TheGarage.Web.DataModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\TheGarage.Web.Infrastructure\TheGarage.Web.Infrastructure.csproj">
       <Project>{2fdc2ec9-9fb8-4851-b7f0-38dc9c357f5a}</Project>

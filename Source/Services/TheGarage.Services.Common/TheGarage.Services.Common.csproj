@@ -57,24 +57,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Administration\IAdministrationService.cs" />
+    <Compile Include="Administration\IUserAdministrationService.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Extensions\CharExtensions.cs" />
     <Compile Include="Extensions\ConnectionStringExtension.cs" />
     <Compile Include="Extensions\EncryptionExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntegerExtension.cs" />
-    <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\IUserProfileService.cs" />
+    <Compile Include="Users\UserUpdateProfileModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Data\TheGarage.Data.Common\TheGarage.Data.Common.csproj">
+      <Project>{B44432EB-73AC-4BA8-AF37-BD8F8FEBA508}</Project>
+      <Name>TheGarage.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\TheGarage.Data.Models\TheGarage.Data.Models.csproj">
+      <Project>{1fe11a32-1188-407a-a47a-18bdd2dbac76}</Project>
+      <Name>TheGarage.Data.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\TheGarage.Data\TheGarage.Data.csproj">
       <Project>{fff478a8-0701-401b-96c0-79180c47e8be}</Project>
       <Name>TheGarage.Data</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

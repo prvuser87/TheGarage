@@ -3,7 +3,7 @@
 namespace TheGarage.Services.Logic.Contracts
 {
 
-    public interface IMappingService : IService
+    public interface IMappingService
     {
         T Map<T>(object source);
 

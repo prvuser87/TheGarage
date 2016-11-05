@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Contracts\IMappingService.cs" />
     <Compile Include="Contracts\IObjectFactory.cs" />
     <Compile Include="MappingService.cs" />
