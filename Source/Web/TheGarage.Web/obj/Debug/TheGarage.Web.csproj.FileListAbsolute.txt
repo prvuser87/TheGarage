@@ -207,3 +207,5 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\Microsoft.Owi
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\obj\Debug\TheGarage.Web.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\obj\Debug\TheGarage.Web.pdb
+C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\Kendo.Mvc.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\Kendo.Mvc.xml
