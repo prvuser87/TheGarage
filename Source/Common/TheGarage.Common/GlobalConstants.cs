@@ -6,6 +6,9 @@
         public const string AdminRole = "Administrator";
         public const string ModeratorRole = "Moderator";
 
+        // Action names
+        public const string Index = "Index";
+
         // Grid
         public const string Send = "Изпрати";
 

@@ -1,9 +1,11 @@
 ﻿namespace TheGarage.Web.Controllers.Base
 {
+    using Data;
     using System;
     using System.Linq;
     using System.Linq.Expressions;
     using System.Web.Mvc;
+    using System.Web.Routing;
 
     /// <summary>
     /// Abstract controller used to provide uow to its successors.
@@ -11,6 +13,26 @@
 
     public abstract class BaseController : Controller
     {
+        public BaseController()
+        {
+        }
+
+        protected override IAsyncResult BeginExecute(RequestContext requestContext, AsyncCallback callback, object state)
+        {
+            // Work with data before BeginExecute to prevent "NotSupportedException: A second operation started on this context before a previous asynchronous operation completed."
+
+            //this.ViewBag.MainCategories =
+            //    this.data.ContestCategories.All()
+            //        .Where(x => x.IsVisible && !x.ParentId.HasValue)
+            //        .OrderBy(x => x.OrderBy)
+            //        .Select(CategoryMenuItemViewModel.FromCategory);
+
+            // Calling BeginExecute before PrepareSystemMessages for the TempData to has values
+            var result = base.BeginExecute(requestContext, callback, state);
+
+            return result;
+        }
+
         protected ActionResult ConditionalActionResult<T>(Func<T> funcToPerform, Func<T, ActionResult> resultToReturn)
         {
             if (ModelState.IsValid)
