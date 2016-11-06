@@ -15,14 +15,12 @@
 
     public class User : IdentityUser, IAuditInfo, IDeletableEntity
     {
-        private ICollection<Client> clients;
         private ICollection<AccessLog> accessLog;
 
         public User()
         {
             // This will prevent UserManager.CreateAsync from causing exception
             this.CreatedOn = DateTime.Now;
-            this.clients = new HashSet<Client>();
             this.accessLog = new HashSet<AccessLog>();
         }
 
@@ -52,7 +50,9 @@
 
         public DateTime? DeletedOn { get; set; }
 
-        public virtual ICollection<Client> Clients { get; set; }
+        public string ClientId { get; set; }
+
+        public virtual Client Client { get; set; }
 
         public virtual ICollection<AccessLog> AccessLogs { get; set; }
 

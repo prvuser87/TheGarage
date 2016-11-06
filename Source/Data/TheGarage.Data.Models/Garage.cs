@@ -5,6 +5,7 @@
     using System.ComponentModel.DataAnnotations;
 
     using Common.Models;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Garage : DeletableEntity
     {
@@ -13,7 +14,6 @@
 
         public Garage()
         {
-            this.Id = Guid.NewGuid();
             this.clients = new HashSet<Client>();
             this.generatedPasswords = new HashSet<GeneratedPassword>();
         }
