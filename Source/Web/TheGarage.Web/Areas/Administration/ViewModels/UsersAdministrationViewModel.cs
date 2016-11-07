@@ -9,9 +9,9 @@ namespace TheGarage.Web.Areas.Administration.ViewModels
     using AutoMapper;
 
     using TheGarage.Data.Models;
-    using TheGarage.Web.Infrastructure.Mapping;
+    using AutoMapper.SelfConfig;
 
-    public class UsersAdministrationViewModel : IMapFrom<User>, IHaveCustomMappings
+    public class UsersAdministrationViewModel : IMapFrom<User>, IMapTo<User>, IHaveCustomMappings
     {
         public bool IsHidden { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿@using GeneralResource = TheGarage.Web.Areas.Administration.ViewModels;
 @{
-    const string ControllerName = "Users";
+    const string ControllerName = "UsersAdministration";
 }
 
 <h2 class="text-center">Users  Administration</h2>
@@ -37,7 +37,7 @@
         editable.Window(w => w.Title("Boxo"));
     })
     .ColumnMenu()
-    .Events(e => e.DataBound("onDataBound"))
+    //.Events(e => e.DataBound("onDataBound"))
     .Pageable(x => x.Refresh(true))
     .Sortable(x => x.Enabled(true).AllowUnsort(false))
     .Filterable(x => x.Enabled(true))
@@ -53,12 +53,11 @@
         .Sort(sort => sort.Add(x => x.Email))
         .Read(read => read.Action("Read", ControllerName))
         .Update(update => update.Action("Update", ControllerName))
-        .Events(ev => ev.Error("validateModelStateErrors"))
     )
 )
 
-<script type="text/javascript">
+@*<script type="text/javascript">
     function onDataBound(e) {
         CreateExportToExcelButton();
     }
-</script>
+</script>*@

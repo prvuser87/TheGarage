@@ -12,7 +12,6 @@ namespace TheGarage.Web
                      "~/Scripts/kendo/jquery.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
-                    "~/Scripts/kendo/kendo.web.min.intellisense.js",
                     "~/Scripts/kendo/kendo.web.min.js",
                     "~/Scripts/kendo/kendo.aspnetmvc.min.js"));
 

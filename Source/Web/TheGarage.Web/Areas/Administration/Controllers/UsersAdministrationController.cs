@@ -4,7 +4,7 @@
     using System.Linq;
     using System.Web.Mvc;
 
-    using AutoMapper.QueryableExtensions;
+    using AutoMapper;
 
     using Kendo.Mvc.UI;
     using Kendo.Mvc.Extensions;
@@ -16,6 +16,7 @@
 
     using Model = TheGarage.Data.Models.User;
     using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.UsersAdministrationViewModel;
+    using AutoMapper.QueryableExtensions;
 
     public class UsersAdministrationController : AdminController
     {
