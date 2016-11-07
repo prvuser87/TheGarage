@@ -228,11 +228,14 @@
     <Compile Include="Areas\Administration\Controllers\AdminController.cs" />
     <Compile Include="Areas\Administration\Controllers\ContentsAdministrationController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoGridAdministrationController.cs" />
-    <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Administration\Controllers\UsersAdministrationController.cs" />
     <Compile Include="Areas\Administration\ViewModels\AdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\UsersAdministrationViewModel.cs" />
+    <Compile Include="Areas\CompanyManagers\CompanyManagersAreaRegistration.cs" />
+    <Compile Include="Areas\GarageManagers\GarageManagersAreaRegistration.cs" />
     <Compile Include="Areas\Garages\Controllers\GaragesController.cs" />
     <Compile Include="Areas\Garages\GaragesAreaRegistration.cs" />
+    <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -246,7 +249,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Administration\Views\Users\Index.html" />
+    <None Include="Areas\Administration\Views\UsersAdministration\Index.cshtml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Kendo\kendo.black.min.css" />
@@ -412,6 +415,11 @@
     <Content Include="Content\Kendo\kendo.uniform.min.css.map" />
     <Content Include="Content\Kendo\kendo.uniform.mobile.min.css.map" />
     <Content Include="Areas\Garages\Views\web.config" />
+    <Content Include="Areas\GarageManagers\Views\web.config" />
+    <Content Include="Areas\CompanyManagers\Views\web.config" />
+    <Content Include="Areas\Users\Views\web.config" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -422,6 +430,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Kendo\jquery.min.js" />
     <Content Include="Scripts\Kendo\kendo.aspnetmvc.min.js" />
+    <None Include="Scripts\Kendo\kendo.web.min.intellisense.js" />
     <Content Include="Scripts\Kendo\kendo.web.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
@@ -468,10 +477,18 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Views\Admin\" />
-    <Folder Include="Areas\Administration\Views\Shared\" />
+    <Folder Include="Areas\CompanyManagers\Controllers\" />
+    <Folder Include="Areas\CompanyManagers\Models\" />
+    <Folder Include="Areas\CompanyManagers\Views\Shared\" />
+    <Folder Include="Areas\GarageManagers\Controllers\" />
+    <Folder Include="Areas\GarageManagers\Models\" />
+    <Folder Include="Areas\GarageManagers\Views\Shared\" />
     <Folder Include="Areas\Garages\Models\" />
     <Folder Include="Areas\Garages\Views\Garages\" />
     <Folder Include="Areas\Garages\Views\Shared\" />
+    <Folder Include="Areas\Users\Controllers\" />
+    <Folder Include="Areas\Users\Models\" />
+    <Folder Include="Areas\Users\Views\Shared\" />
     <Folder Include="Content\Kendo\Black\" />
     <Folder Include="Content\Kendo\BlueOpal\" />
     <Folder Include="Content\Kendo\Bootstrap\" />

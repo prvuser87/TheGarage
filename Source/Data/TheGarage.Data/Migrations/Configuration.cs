@@ -19,11 +19,10 @@ namespace TheGarage.Data.Migrations
 
         protected override void Seed(TheGarageDbContext context)
         {
-            this.SeedRoles(context);
-            this.SeedAdmin(context);
-            this.SeedModerator(context);
-            this.SeedUsers(context);
-            this.SeedData(context);
+                this.SeedRoles(context);
+                this.SeedAdmin(context);
+                this.SeedUsers(context);
+                this.SeedData(context);
         }
 
         private void SeedData(TheGarageDbContext context)
@@ -45,6 +44,11 @@ namespace TheGarage.Data.Migrations
 
         private void SeedUsers(TheGarageDbContext context)
         {
+            if (context.Users.Any())
+            {
+                return;
+            }
+
             var names = GetUserNames();
 
             var userManager = new UserManager<User>(new UserStore<User>(context));
@@ -65,34 +69,6 @@ namespace TheGarage.Data.Migrations
 
                 context.SaveChanges();
             }
-        }
-
-        private void SeedModerator(TheGarageDbContext context)
-        {
-            const string ModeratorEmail = "moderator@moderator.com";
-            const string ModeratorPassword = "moderator123456";
-
-            if (context.Users.Any(u => u.Email == ModeratorEmail))
-            {
-                return;
-            }
-
-            var userManager = new UserManager<User>(new UserStore<User>(context));
-
-            var admin = new User
-            {
-                FirstName = "Gosho",
-                LastName = "Moderatora",
-                Email = ModeratorEmail,
-                UserName = ModeratorEmail
-            };
-
-            userManager.Create(admin, ModeratorPassword);
-
-            userManager.AddToRole(admin.Id, GlobalConstants.ModeratorRole);
-            userManager.AddToRole(admin.Id, GlobalConstants.DefaultRole);
-
-            context.SaveChanges();
         }
 
         private void SeedAdmin(TheGarageDbContext context)
@@ -117,7 +93,8 @@ namespace TheGarage.Data.Migrations
 
             userManager.Create(admin, AdminPassword);
             userManager.AddToRole(admin.Id, GlobalConstants.AdminRole);
-            userManager.AddToRole(admin.Id, GlobalConstants.ModeratorRole);
+            userManager.AddToRole(admin.Id, GlobalConstants.CompanyManagerRole);
+            userManager.AddToRole(admin.Id, GlobalConstants.GarageManagerRole);
             userManager.AddToRole(admin.Id, GlobalConstants.DefaultRole);
 
             context.SaveChanges();
@@ -134,8 +111,9 @@ namespace TheGarage.Data.Migrations
             var roleManager = new RoleManager<IdentityRole>(roleStore);
 
             roleManager.Create(new IdentityRole { Name = GlobalConstants.DefaultRole });
+            roleManager.Create(new IdentityRole { Name = GlobalConstants.CompanyManagerRole });
+            roleManager.Create(new IdentityRole { Name = GlobalConstants.GarageManagerRole });
             roleManager.Create(new IdentityRole { Name = GlobalConstants.AdminRole });
-            roleManager.Create(new IdentityRole { Name = GlobalConstants.ModeratorRole });
 
             context.SaveChanges();
         }
