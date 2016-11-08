@@ -6,8 +6,3 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\bin\De
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\bin\Debug\TheGarage.Web.DataModels.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\obj\Debug\TheGarage.Web.DataModels.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\obj\Debug\TheGarage.Web.DataModels.pdb
-D:\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\bin\Debug\TheGarage.Web.DataModels.dll
-D:\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\bin\Debug\TheGarage.Web.DataModels.pdb
-D:\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\obj\Debug\TheGarage.Web.DataModels.csprojResolveAssemblyReference.cache
-D:\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\obj\Debug\TheGarage.Web.DataModels.dll
-D:\Source\Repos\TheGarage\Source\Web\TheGarage.Web.DataModels\obj\Debug\TheGarage.Web.DataModels.pdb

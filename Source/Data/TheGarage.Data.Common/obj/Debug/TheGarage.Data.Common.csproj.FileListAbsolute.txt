@@ -25,17 +25,3 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debu
 C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.pdb
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\TheGarage.Data.Common.dll.config
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\TheGarage.Data.Common.dll
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\TheGarage.Data.Common.pdb
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.dll
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.SqlServer.dll
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.xml
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\EntityFramework.SqlServer.xml
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.csprojResolveAssemblyReference.cache
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.dll
-D:\Source\Repos\TheGarage\Source\Data\TheGarage.Data.Common\obj\Debug\TheGarage.Data.Common.pdb

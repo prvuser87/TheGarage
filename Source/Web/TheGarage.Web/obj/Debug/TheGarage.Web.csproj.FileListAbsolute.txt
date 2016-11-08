@@ -209,5 +209,3 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\obj\Debug\TheGara
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\obj\Debug\TheGarage.Web.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\Kendo.Mvc.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web\bin\Kendo.Mvc.xml
-D:\Source\Repos\TheGarage\Source\Web\TheGarage.Web\obj\Debug\TheGarage.Web.csprojResolveAssemblyReference.cache
-D:\Source\Repos\TheGarage\Source\Web\TheGarage.Web\obj\Debug\TheGarage.Web.dll
