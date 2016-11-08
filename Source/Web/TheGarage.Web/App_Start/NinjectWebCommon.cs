@@ -13,9 +13,11 @@ namespace TheGarage.Web.App_Start
     using Ninject;
     using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;
-
-    using Services.Common;
-    using ServerConstants = TheGarage.Web.Common.Constants;
+    using Infrastructure.Caching;
+    using Services.Common.Administration;
+    using Services.Administration;
+    using Services.Logic;
+    using Services.Logic.Contracts;
 
     public static class NinjectWebCommon 
     {
@@ -68,17 +70,29 @@ namespace TheGarage.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
-            kernel.Bind<DbContext>().To<TheGarageDbContext>().InRequestScope();
+            RegisterDatabaseServices(kernel);
+            RegisterServicesLayerServices(kernel);
+        }
 
-            kernel.Bind(k => k
-                .From(
-                    ServerConstants.InfrastructureAssembly,
-                    ServerConstants.DataServicesAssembly,
-                    ServerConstants.LogicServicesAssembly)
-                .SelectAllClasses()
-                .InheritedFrom<IService>()
-                .BindDefaultInterface());
-        }        
+        private static void RegisterDatabaseServices(IKernel kernel)
+        {
+            kernel.Bind<DbContext>().To<TheGarageDbContext>();
+            kernel.Bind<ITheGarageDbContext>().To<TheGarageDbContext>();
+            kernel.Bind(typeof(IDeletableEntityRepository<>)).To(typeof(DeletableEntityRepository<>));
+            kernel.Bind(typeof(IRepository<>)).To(typeof(EfGenericRepository<>));
+            kernel.Bind<ITheGarageData>().To<TheGarageData>();
+        }
+        private static void RegisterServicesLayerServices(IKernel kernel)
+        {
+            kernel.Bind<ICacheService>().To<InMemoryCache>();
+            kernel.Bind<IMappingService>().To<MappingService>();
+            kernel.Bind<IObjectFactory>().To<ObjectFactory>();
+
+            // admin
+            kernel.Bind<IUserAdministrationService>().To<UsersAdministrationService>();
+
+            //moderator
+
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System.Data.Entity;
+﻿using PhilosophicalMonkey;
+using System;
+using System.Data.Entity;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -17,6 +20,10 @@ namespace TheGarage.Web
 
              Database.SetInitializer(new MigrateDatabaseToLatestVersion<TheGarageDbContext, Configuration>());
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<TheGarageDbContext>());
+            var seedTypes = new Type[] { typeof(Startup) };
+            var assemblies = Reflect.OnTypes.GetAssemblies(seedTypes);
+            var typesInAssemblies = Reflect.OnTypes.GetAllExportedTypes(assemblies);
+            AutoMapper.SelfConfig.MappingConfigFactory.LoadAllMappings(typesInAssemblies);
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

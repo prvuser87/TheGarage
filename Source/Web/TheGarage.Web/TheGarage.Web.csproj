@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44328</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -46,6 +46,22 @@
   <ItemGroup>
     <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.EF6, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.EF6.0.5.0\lib\net45\AutoMapper.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.SelfConfig, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.SelfConfig.1.0.0\lib\net451\AutoMapper.SelfConfig.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DelegateDecompiler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=93b26a10a04705bd, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DelegateDecompiler.0.18.1\lib\net40-Client\DelegateDecompiler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DelegateDecompiler.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=93b26a10a04705bd, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DelegateDecompiler.EntityFramework.0.18.1\lib\net45\DelegateDecompiler.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kendo.Mvc, Version=2016.3.914.545, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
@@ -85,6 +101,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Reflection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Mono.Reflection.1.0.0.0\lib\Mono.Reflection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
@@ -101,9 +121,20 @@
       <HintPath>..\..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PhilosophicalMonkey, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PhilosophicalMonkey.1.1.0\lib\net451\PhilosophicalMonkey.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -228,11 +259,15 @@
     <Compile Include="Areas\Administration\Controllers\AdminController.cs" />
     <Compile Include="Areas\Administration\Controllers\ContentsAdministrationController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoGridAdministrationController.cs" />
-    <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Administration\Controllers\UsersAdministrationController.cs" />
     <Compile Include="Areas\Administration\ViewModels\AdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\UsersAdministrationViewModel.cs" />
+    <Compile Include="Areas\CompanyManagers\CompanyManagersAreaRegistration.cs" />
+    <Compile Include="Areas\GarageManagers\GarageManagersAreaRegistration.cs" />
+    <Compile Include="Areas\Garages\Controllers\GaragesController.cs" />
+    <Compile Include="Areas\Garages\GaragesAreaRegistration.cs" />
+    <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Base\BaseAuthorizationController.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -245,7 +280,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Administration\Views\Users\Index.html" />
+    <None Include="Areas\Administration\Views\UsersAdministration\Index.cshtml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Kendo\kendo.black.min.css" />
@@ -410,6 +445,12 @@
     <Content Include="Content\Kendo\kendo.silver.mobile.min.css.map" />
     <Content Include="Content\Kendo\kendo.uniform.min.css.map" />
     <Content Include="Content\Kendo\kendo.uniform.mobile.min.css.map" />
+    <Content Include="Areas\Garages\Views\web.config" />
+    <Content Include="Areas\GarageManagers\Views\web.config" />
+    <Content Include="Areas\CompanyManagers\Views\web.config" />
+    <Content Include="Areas\Users\Views\web.config" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -420,6 +461,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Kendo\jquery.min.js" />
     <Content Include="Scripts\Kendo\kendo.aspnetmvc.min.js" />
+    <None Include="Scripts\Kendo\kendo.web.min.intellisense.js" />
     <Content Include="Scripts\Kendo\kendo.web.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
@@ -466,7 +508,18 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Views\Admin\" />
-    <Folder Include="Areas\Administration\Views\Shared\" />
+    <Folder Include="Areas\CompanyManagers\Controllers\" />
+    <Folder Include="Areas\CompanyManagers\Models\" />
+    <Folder Include="Areas\CompanyManagers\Views\Shared\" />
+    <Folder Include="Areas\GarageManagers\Controllers\" />
+    <Folder Include="Areas\GarageManagers\Models\" />
+    <Folder Include="Areas\GarageManagers\Views\Shared\" />
+    <Folder Include="Areas\Garages\Models\" />
+    <Folder Include="Areas\Garages\Views\Garages\" />
+    <Folder Include="Areas\Garages\Views\Shared\" />
+    <Folder Include="Areas\Users\Controllers\" />
+    <Folder Include="Areas\Users\Models\" />
+    <Folder Include="Areas\Users\Views\Shared\" />
     <Folder Include="Content\Kendo\Black\" />
     <Folder Include="Content\Kendo\BlueOpal\" />
     <Folder Include="Content\Kendo\Bootstrap\" />
@@ -512,25 +565,29 @@
       <Project>{fff478a8-0701-401b-96c0-79180c47e8be}</Project>
       <Name>TheGarage.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services\TheGarage.Services.Administration\TheGarage.Services.Administration.csproj">
+      <Project>{c5ff5161-0332-4f20-9ac3-f453e0052588}</Project>
+      <Name>TheGarage.Services.Administration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Services\TheGarage.Services.Common\TheGarage.Services.Common.csproj">
       <Project>{a7f90df9-5069-4ead-b393-51429c11ba90}</Project>
       <Name>TheGarage.Services.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Services\TheGarage.Services.Data\TheGarage.Services.Data.csproj">
-      <Project>{930a700e-defb-47fe-8c42-5048565cfbdf}</Project>
-      <Name>TheGarage.Services.Data</Name>
+    <ProjectReference Include="..\..\Services\TheGarage.Services.Garages\TheGarage.Services.Garages.csproj">
+      <Project>{78f5517a-4042-426f-95e4-34b5e9515169}</Project>
+      <Name>TheGarage.Services.Garages</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Services\TheGarage.Services.Logic\TheGarage.Services.Logic.csproj">
       <Project>{e2b26380-5e49-475d-b2bb-7b21b8a1f265}</Project>
       <Name>TheGarage.Services.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services\TheGarage.Services.Users\TheGarage.Services.Users.csproj">
+      <Project>{23fad815-5391-4569-99df-f566f8ecd3b3}</Project>
+      <Name>TheGarage.Services.Users</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TheGarage.Web.Common\TheGarage.Web.Common.csproj">
       <Project>{4f059ac2-d39a-4450-82ce-289795eab9c8}</Project>
       <Name>TheGarage.Web.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TheGarage.Web.DataModels\TheGarage.Web.DataModels.csproj">
-      <Project>{047673ad-c06a-4dee-8174-3cb60be107a0}</Project>
-      <Name>TheGarage.Web.DataModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\TheGarage.Web.Infrastructure\TheGarage.Web.Infrastructure.csproj">
       <Project>{2fdc2ec9-9fb8-4851-b7f0-38dc9c357f5a}</Project>
@@ -558,7 +615,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>5005</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:5005/</IISUrl>
+          <IISUrl>http://localhost:12841/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:12841/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

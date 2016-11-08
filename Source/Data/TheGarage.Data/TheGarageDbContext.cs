@@ -8,7 +8,7 @@
     using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
 
-    public class TheGarageDbContext : IdentityDbContext<User>
+    public class TheGarageDbContext : IdentityDbContext<User>, ITheGarageDbContext
     {
         public TheGarageDbContext()
             : base("TheGarage")
@@ -31,6 +31,14 @@
         public IDbSet<RequestedGarage> RequestedGarages { get; set; }
 
         public IDbSet<Transaction> Transactions { get; set; }
+
+        public DbContext DbContext
+        {
+            get
+            {
+                return this;
+            }
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -4,7 +4,7 @@
 
     using TheGarage.Services.Common;
 
-    public interface IObjectFactory : IService
+    public interface IObjectFactory
     {
         T GetInstance<T>();
 

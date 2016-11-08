@@ -4,7 +4,8 @@
     using System.Collections.Generic;
 
     using Common.Models;
-
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.ComponentModel.DataAnnotations;
 
     public class Client : DeletableEntity
     {
@@ -12,11 +13,11 @@
 
         public Client()
         {
-            this.Id = Guid.NewGuid();
             this.transactions = new HashSet<Transaction>();
         }
 
-        public Guid Id { get; set; }
+        [Key, ForeignKey("User")]
+        public string Id { get; set; }
 
         public bool IsApproved { get; set; }
 
