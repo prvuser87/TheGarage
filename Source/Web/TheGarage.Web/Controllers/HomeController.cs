@@ -1,8 +1,9 @@
 ﻿using System.Web.Mvc;
+using TheGarage.Web.Controllers.Base;
 
 namespace TheGarage.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {

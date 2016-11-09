@@ -3,9 +3,14 @@
     using System.Data.Entity;
     using Common.Repositories;
     using Models;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     public interface ITheGarageData
     {
+        IRepository<IdentityUserRole> UserRole { get; }
+
+        IRepository<IdentityRole> Roles { get; }
+
         IDeletableEntityRepository<User> Users { get; }
 
         IDeletableEntityRepository<AccessLog> AccessLogs { get; }

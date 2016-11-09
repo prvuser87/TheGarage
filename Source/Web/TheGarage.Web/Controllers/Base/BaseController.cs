@@ -10,7 +10,7 @@
     /// <summary>
     /// Abstract controller used to provide uow to its successors.
     /// </summary>
-
+    [MainGaragesActionFilter]
     public abstract class BaseController : Controller
     {
         public BaseController()

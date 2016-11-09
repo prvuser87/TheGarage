@@ -9,9 +9,10 @@
     using Microsoft.Owin.Security;
     using Data.Models;
     using TheGarage.Web.Models;
+    using Base;
 
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
@@ -376,7 +377,6 @@
                         return RedirectToLocal(returnUrl);
                     }
                 }
-
                 AddErrors(result);
             }
 

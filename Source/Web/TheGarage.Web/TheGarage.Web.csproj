@@ -252,6 +252,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\MainGaragesActionFilter.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -259,13 +260,18 @@
     <Compile Include="Areas\Administration\Controllers\AdminController.cs" />
     <Compile Include="Areas\Administration\Controllers\ContentsAdministrationController.cs" />
     <Compile Include="Areas\Administration\Controllers\KendoGridAdministrationController.cs" />
-    <Compile Include="Areas\Administration\Controllers\UsersAdministrationController.cs" />
+    <Compile Include="Areas\Administration\Controllers\RolesController.cs" />
+    <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
     <Compile Include="Areas\Administration\ViewModels\AdministrationViewModel.cs" />
-    <Compile Include="Areas\Administration\ViewModels\UsersAdministrationViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Roles\RoleAdministrationViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Roles\UserInRoleAdministrationViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Users\UsersAdministrationViewModel.cs" />
     <Compile Include="Areas\CompanyManagers\CompanyManagersAreaRegistration.cs" />
     <Compile Include="Areas\GarageManagers\GarageManagersAreaRegistration.cs" />
     <Compile Include="Areas\Garages\Controllers\GaragesController.cs" />
     <Compile Include="Areas\Garages\GaragesAreaRegistration.cs" />
+    <Compile Include="Areas\Users\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Users\Models\UserProfileViewModel.cs" />
     <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Base\BaseController.cs" />
@@ -275,12 +281,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\GarageMenuItemViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Areas\Administration\Views\UsersAdministration\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Roles\EditorTemplates\AddUserToRole.cshtml" />
+    <Content Include="Areas\Administration\Views\Roles\Index.cshtml" />
+    <None Include="Areas\Administration\Views\Users\Index.cshtml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Kendo\kendo.black.min.css" />
@@ -451,6 +460,9 @@
     <Content Include="Areas\Users\Views\web.config" />
     <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Garages\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Garages\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Garages\Views\List\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -516,9 +528,7 @@
     <Folder Include="Areas\GarageManagers\Views\Shared\" />
     <Folder Include="Areas\Garages\Models\" />
     <Folder Include="Areas\Garages\Views\Garages\" />
-    <Folder Include="Areas\Garages\Views\Shared\" />
-    <Folder Include="Areas\Users\Controllers\" />
-    <Folder Include="Areas\Users\Models\" />
+    <Folder Include="Areas\Users\Views\Profile\" />
     <Folder Include="Areas\Users\Views\Shared\" />
     <Folder Include="Content\Kendo\Black\" />
     <Folder Include="Content\Kendo\BlueOpal\" />

@@ -115,6 +115,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Caching\ICacheService.cs" />
@@ -135,6 +139,10 @@
     <ProjectReference Include="..\..\Data\TheGarage.Data.Common\TheGarage.Data.Common.csproj">
       <Project>{b44432eb-73ac-4ba8-af37-bd8f8feba508}</Project>
       <Name>TheGarage.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\TheGarage.Data.Models\TheGarage.Data.Models.csproj">
+      <Project>{1fe11a32-1188-407a-a47a-18bdd2dbac76}</Project>
+      <Name>TheGarage.Data.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Data\TheGarage.Data\TheGarage.Data.csproj">
       <Project>{fff478a8-0701-401b-96c0-79180c47e8be}</Project>

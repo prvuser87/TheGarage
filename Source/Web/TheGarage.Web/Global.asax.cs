@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using TheGarage.Data;
 using TheGarage.Data.Migrations;
+using TheGarage.Web.Infrastructure.Filters;
 
 namespace TheGarage.Web
 {

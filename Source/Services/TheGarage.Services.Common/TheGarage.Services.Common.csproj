@@ -57,14 +57,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\IAdministrationService.cs" />
     <Compile Include="Administration\IUserAdministrationService.cs" />
+    <Compile Include="Administration\IUserRoleAdministrationService.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Extensions\CharExtensions.cs" />
     <Compile Include="Extensions\ConnectionStringExtension.cs" />
     <Compile Include="Extensions\EncryptionExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntegerExtension.cs" />
+    <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\IUserProfileService.cs" />
     <Compile Include="Users\UserUpdateProfileModel.cs" />

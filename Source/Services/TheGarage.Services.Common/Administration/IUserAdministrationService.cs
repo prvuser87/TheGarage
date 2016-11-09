@@ -1,16 +1,25 @@
 ﻿namespace TheGarage.Services.Common.Administration
 {
-    using System;
     using System.Collections.Generic;
 
-    using TheGarage.Data.Models;
+    using Data.Common.Models;
+    using Data.Models;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
-    public interface IUserAdministrationService
+    public interface IUserAdministrationService : IService
     {
+        void Create(User entity);
+
+        void Delete(object id);
+
+        void Update(User entity);
+
         IEnumerable<User> Read();
 
-        //IEnumerable<Guid> UpdateUser(string userId, bool IsAdmin, bool IsModerator, bool IsHidden);
+        void AddUserToRole(IdentityUserRole entity);
 
-        //IEnumerable<Guid> DeleteUser(string userId);
+        User Get(object id);
+
+        IEnumerable<User> GetAllUsersByRoleId(string id);
     }
 }

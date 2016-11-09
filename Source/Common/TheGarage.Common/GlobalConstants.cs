@@ -29,5 +29,7 @@
         public const string UserDisplay = "Потребител";
         public const string ActionDisplay = "Действие";
         public const string InformationDisplay = "Информация";
+
+        public const string JsonMimeType = "application/json";
     }
 }
