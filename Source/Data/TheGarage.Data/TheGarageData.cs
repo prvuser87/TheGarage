@@ -6,6 +6,7 @@
     using Common.Models;
     using Common.Repositories;
     using Models;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     public class TheGarageData : ITheGarageData
     {
@@ -35,15 +36,16 @@
         {
             get
             {
-                return this.GetRepository<User>();
+                return this.GetDeletableEntityRepository<User>();
             }
         }
+
 
         public IDeletableEntityRepository<AccessLog> AccessLogs
         {
             get
             {
-                return this.GetRepository<AccessLog>();
+                return this.GetDeletableEntityRepository<AccessLog>();
             }
         }
 
@@ -51,7 +53,7 @@
         {
             get
             {
-                return this.GetRepository<Client>();
+                return this.GetDeletableEntityRepository<Client>();
             }
         }
 
@@ -59,7 +61,7 @@
         {
             get
             {
-                return this.GetRepository<Company>();
+                return this.GetDeletableEntityRepository<Company>();
             }
         }
 
@@ -67,7 +69,7 @@
         {
             get
             {
-                return this.GetRepository<GeneratedPassword>();
+                return this.GetDeletableEntityRepository<GeneratedPassword>();
             }
         }
 
@@ -75,7 +77,7 @@
         {
             get
             {
-                return this.GetRepository<Promotion>();
+                return this.GetDeletableEntityRepository<Promotion>();
             }
         }
 
@@ -83,7 +85,7 @@
         {
             get
             {
-                return this.GetRepository<RequestedGarage>();
+                return this.GetDeletableEntityRepository<RequestedGarage>();
             }
         }
 
@@ -91,7 +93,7 @@
         {
             get
             {
-                return this.GetRepository<Transaction>();
+                return this.GetDeletableEntityRepository<Transaction>();
             }
         }
 
@@ -99,7 +101,23 @@
         {
             get
             {
-                return this.GetRepository<Garage>();
+                return this.GetDeletableEntityRepository<Garage>();
+            }
+        }
+
+        public IRepository<IdentityRole> Roles
+        {
+            get
+            {
+                return this.GetRepository<IdentityRole>();
+            }
+        }
+
+        public IRepository<IdentityUserRole> UserRole
+        {
+            get
+            {
+                return this.GetRepository<IdentityUserRole>();
             }
         }
 
@@ -115,7 +133,21 @@
             }
         }
 
-        private IDeletableEntityRepository<T> GetRepository<T>() where T : class, IDeletableEntity
+        private IRepository<T> GetRepository<T>()
+            where T : class
+        {
+            if (!this.repositories.ContainsKey(typeof(T)))
+            {
+                var type = typeof(EfGenericRepository<T>);
+
+                this.repositories.Add(typeof(T), Activator.CreateInstance(type, this.context));
+            }
+
+            return (IRepository<T>)this.repositories[typeof(T)];
+        }
+
+
+        private IDeletableEntityRepository<T> GetDeletableEntityRepository<T>() where T : class, IDeletableEntity
         {
             var typeOfModel = typeof(T);
 

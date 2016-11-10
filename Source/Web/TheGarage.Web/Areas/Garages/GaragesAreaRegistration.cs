@@ -14,6 +14,19 @@ namespace TheGarage.Web.Areas.Garages
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+
+
+            context.MapRoute(
+                    "Garages_by_id_and_name",
+                    "Garages/{id}/{name}",
+                    new
+                    {
+                        controller = "List",
+                        action = "Index1",
+                        id = UrlParameter.Optional,
+                        category = UrlParameter.Optional
+                    });
+
             context.MapRoute(
                 "Garages_default",
                 "Garages/{controller}/{action}/{id}",

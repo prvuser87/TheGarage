@@ -90,6 +90,7 @@ namespace TheGarage.Web.App_Start
 
             // admin
             kernel.Bind<IUserAdministrationService>().To<UsersAdministrationService>();
+            kernel.Bind<IUserRoleAdministrationService>().To<UserRoleAdministrationService>();
 
             //moderator
 

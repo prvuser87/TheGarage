@@ -9,9 +9,10 @@
     using Microsoft.Owin.Security;
 
     using TheGarage.Web.Models;
+    using Base;
 
     [Authorize]
-    public class ManageController : Controller
+    public class ManageController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;

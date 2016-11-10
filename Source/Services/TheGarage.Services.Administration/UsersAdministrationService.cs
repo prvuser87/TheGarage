@@ -19,9 +19,50 @@
         {
         }
 
+        public void Create(User entity)
+        {
+            this.Data.Users.Add(entity);
+            this.Data.SaveChanges();
+        }
+
+        public void Delete(object id)
+        {
+            var content = this.Data.Users.GetById(id);
+
+            this.Data.SaveChanges();
+        }
+
+        public User Get(object id)
+        {
+            return this.Data.Users.GetById(id);
+        }
+
+        public IEnumerable<User> GetAllUsersByRoleId(string id)
+        {
+            var users = this.Data.Users
+                 .All()
+                 .Where(u => u.Roles.Any(r => r.RoleId == id));
+
+            return users;
+        }
+
+
+
+        public void AddUserToRole(IdentityUserRole entity)
+        {
+            this.Data.UserRole.Add(entity);
+            this.Data.SaveChanges();
+        }
+
         public IEnumerable<User> Read()
         {
             return this.Data.Users.All();
+        }
+
+        public void Update(User entity)
+        {
+            this.Data.Users.Update(entity);
+            this.Data.SaveChanges();
         }
 
         //public IEnumerable<Guid> UpdateUser(string userId, bool IsAdmin, bool IsModerator, bool IsHidden)
