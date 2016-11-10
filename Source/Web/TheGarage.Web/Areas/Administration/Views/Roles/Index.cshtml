@@ -5,28 +5,29 @@
 <h1>"Roles"</h1>
 
 @(Html.Kendo().Grid<TheGarage.Web.Areas.Administration.ViewModels.Roles.RoleAdministrationViewModel>()
-    .Name("RoleDataGrid")
+    .Name("DataGrid")
     .Columns(columns =>
-        {
-            columns.Bound(col => col.Name);
-            columns.Command(command => command.Edit().Text(" ").UpdateText("Change").CancelText("Cancle")).Width(80);
-            columns.Command(command => command.Destroy().Text(" ")).Width(80);
-        })
+    {
+        columns.Bound(col => col.Name);
+        columns.Command(command => command.Edit().Text(" ").UpdateText("Change").CancelText("Cancle")).Width(80);
+        columns.Command(command => command.Destroy().Text(" ")).Width(80);
+    })
     .ToolBar(toolbar =>
     {
         toolbar.Create().Text("Create");
         toolbar.Custom().Text("Back_to_navigation").Action("Navigation", "Administration", new { Area = "" }).Name("custom-toolbar-button");
-        toolbar.Custom().Text("Export_to_excel").Name("custom-toolbar-button").HtmlAttributes(new { id = "export" }).Url(Url.Action("ExportToExcel", ControllerName, new { page = 1, pageSize = "~", filter = "!!", sort = "~" }));
+        //toolbar.Custom().Text("Export_to_excel").Name("custom-toolbar-button").HtmlAttributes(new { id = "export" }).Url(Url.Action("ExportToExcel", ControllerName, new { page = 1, pageSize = "~", filter = "!!", sort = "~" }));
     })
     .Editable(editable =>
     {
         editable.Mode(GridEditMode.PopUp);
-        editable.Window(w => w.Title(ViewBag.Title));
+        editable.Window(w => w.Title("Title"));
         editable.DisplayDeleteConfirmation("Delete prompt");
     })
+    .Editable(editable => editable.Mode(GridEditMode.PopUp))
     .ClientDetailTemplateId("users-in-role")
     .ColumnMenu()
-    .Events(e => e.DataBound("onDataBound"))
+    //.Events(e => e.DataBound("onDataBound"))
     .Pageable(x => x.Refresh(true))
     .Sortable(x => x.Enabled(true).AllowUnsort(false))
     .Filterable(x => x.Enabled(true))
@@ -36,23 +37,23 @@
         .Ajax()
         .ServerOperation(true)
         .Model(model =>
-            {
-                model.Id(m => m.RoleId);
-            })
+        {
+            model.Id(m => m.RoleId);
+        })
         .Sort(sort => sort.Add(x => x.Name).Descending())
         .Create(create => create.Action("Create", ControllerName))
         .Read(read => read.Action("Read", ControllerName))
         .Update(update => update.Action("Update", ControllerName))
         .Destroy(destroy => destroy.Action("Destroy", ControllerName))
-        .Events(ev => ev.Error("validateModelStateErrors"))
+    //.Events(ev => ev.Error("validateModelStateErrors"))
     )
 )
 
-<script type="text/javascript">
-    function onDataBound(e) {
+@*<script type="text/javascript">
+    function onDataBound() {
         CreateExportToExcelButton();
     }
-</script>
+</script>*@
 
 <script type="text/x-kendo-template" id="users-in-role">
     @(Html.Kendo().Grid<TheGarage.Web.Areas.Administration.ViewModels.Roles.UserInRoleAdministrationViewModel>()

@@ -33,7 +33,6 @@ namespace TheGarage.Web.Areas.Administration.Controllers
             return this.View();
         }
 
-        [HttpPost]
         public ActionResult Read([DataSourceRequest]DataSourceRequest request)
         {
             var data = this.userRoleAdministrationService
@@ -57,23 +56,13 @@ namespace TheGarage.Web.Areas.Administration.Controllers
                 var dbmodel = Mapper.Map<Model>(model);
 
                 this.userRoleAdministrationService.Create(dbmodel);
+
+
             }
+
 
             return this.GridOperation(model, request);
         }
-
-        //[HttpPost]
-        //public ActionResult Read(DataSourceRequest request, Guid? Id = null)
-        //{
-        //    var data = this.userRoleAdministrationService.Read().AsQueryable();
-
-        //    //if (commentId.HasValue)
-        //    //{
-        //    //    data = data.Where(c => c.CommentId == commentId.Value);
-        //    //}
-
-        //    return this.Json(data.ProjectTo<ViewModel>().ToDataSourceResult(request));
-        //}
 
         [HttpPost]
         public ActionResult Update([DataSourceRequest]DataSourceRequest request, ViewModel model)
