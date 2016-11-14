@@ -1,12 +1,12 @@
 ﻿@(Html.Kendo()
     .ComboBoxFor(m => m)
-    .Name("ContestId")
+    .Name("GarageId")
     .DataTextField("Name")
     .DataValueField("Id")
     .Filter(FilterType.Contains)
     .MinLength(1)
-    .Placeholder("Choose_contest")
-    .Value("Choose_contest")
+    .Placeholder("Choose_garage")
+    .Value("Choose_garage")
     .DataSource(data =>
     {
         data.ServerFiltering(true)

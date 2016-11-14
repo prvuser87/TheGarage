@@ -11,7 +11,7 @@
             .Filter(FilterType.Contains)
             .AutoBind(false)
             .MinLength(3)
-            .Placeholder("Choose_or_enter_contest")
+            .Placeholder("Choose_or_enter_garage")
             .Events(ev => ev.Change("selectContest"))
             .DataSource(dataSource =>
                 {
@@ -40,7 +40,7 @@
     <script>
         function additionalComboBoxData() {
             return {
-                text: $("#contests").data("kendoComboBox").input.val()
+                text: $("#garages").data("kendoComboBox").input.val()
             }
         }
 
@@ -52,7 +52,7 @@
             });
         }
 
-        function clearContestComboBox() {
+        function clearGarageComboBox() {
             $("#garages").data("kendoComboBox").value(null);
         }
     </script>

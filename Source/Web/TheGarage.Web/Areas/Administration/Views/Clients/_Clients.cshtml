@@ -28,7 +28,6 @@
         editable.DisplayDeleteConfirmation("Delete_prompt");
     })
     .ColumnMenu()
-    .Edit("onEdit"))
     .Pageable(x => x.Refresh(true))
     .Sortable(x => x.Enabled(true).AllowUnsort(false))
     .Filterable(x => x.Enabled(true))
@@ -54,13 +53,13 @@
     }
 
     function onEdit(e) {
-        var contestComboBox = e.container.find('#ClientId').data('kendoComboBox');
-        contestComboBox.value(null);
-        contestComboBox.text(null);
+        var garageComboBox = e.container.find('#ClientId').data('kendoComboBox');
+        garageComboBox.value(null);
+        garageComboBox.text(null);
     }
 </script>
 
-@if (Model.HasValue)
+@*@if (Model.HasValue)
 {
     <script>
         var exportButton = $('#export');
@@ -69,4 +68,4 @@
         var url = linkParts[0] + 'ByContest?' + linkParts[1] + "&contestId=@Model.Value";
         exportButton.attr('href', url);
     </script>
-}
+}*@
