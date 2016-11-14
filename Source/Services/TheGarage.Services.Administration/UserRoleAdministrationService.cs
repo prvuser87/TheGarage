@@ -24,7 +24,7 @@ namespace TheGarage.Services.Administration
 
         public void Delete(object id)
         {
-            var content = this.Data.Users.GetById(id);
+            var content = this.Data.Roles.GetById(id);
 
             this.Data.SaveChanges();
         }

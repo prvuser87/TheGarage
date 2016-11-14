@@ -1,0 +1,5 @@
+C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\bin\Release\TheGarage.Common.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\bin\Release\TheGarage.Common.pdb
+C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Release\TheGarage.Common.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Release\TheGarage.Common.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Release\TheGarage.Common.pdb

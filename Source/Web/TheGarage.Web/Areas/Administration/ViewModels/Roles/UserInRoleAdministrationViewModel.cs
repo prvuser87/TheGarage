@@ -1,12 +1,13 @@
 ﻿namespace TheGarage.Web.Areas.Administration.ViewModels.Roles
 {
     using AutoMapper.SelfConfig;
+    using Common;
     using Data.Models;
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.Linq.Expressions;
 
-    public class UserInRoleAdministrationViewModel : IMapFrom<User>, IMapTo<User>
+    public class UserInRoleAdministrationViewModel : AdministrationViewModel, IMapFrom<User>, IMapTo<User>
     {
         public string Id { get; set; }
 

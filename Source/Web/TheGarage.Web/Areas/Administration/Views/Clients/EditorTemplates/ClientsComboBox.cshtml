@@ -1,0 +1,19 @@
+﻿@(Html.Kendo()
+    .ComboBoxFor(m => m)
+    .Name("ContestId")
+    .DataTextField("Name")
+    .DataValueField("Id")
+    .Filter(FilterType.Contains)
+    .MinLength(1)
+    .Placeholder("Choose_contest")
+    .Value("Choose_contest")
+    .DataSource(data =>
+    {
+        data.ServerFiltering(true)
+            .Read(read =>
+            {
+                read.Action("Garages", "Clients")
+                    .Data(@<text> function () { return { text: $('\\#GarageId').data("kendoComboBox").input.val() };} </text>);
+            });
+    })
+    .HtmlAttributes(new { style = "width: 100%;" }))

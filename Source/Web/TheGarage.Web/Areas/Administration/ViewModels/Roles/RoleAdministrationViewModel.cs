@@ -9,8 +9,9 @@
     using AutoMapper.SelfConfig;
     using Data.Models;
     using AutoMapper;
+    using Common;
 
-    public class RoleAdministrationViewModel : IMapFrom<IdentityRole>, IMapTo<IdentityRole>, IHaveCustomMappings
+    public class RoleAdministrationViewModel : AdministrationViewModel, IMapFrom<IdentityRole>, IMapTo<IdentityRole>, IHaveCustomMappings
     {
         public string RoleId { get; set; }
 

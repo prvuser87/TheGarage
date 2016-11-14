@@ -17,6 +17,6 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\b
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\obj\Debug\TheGarage.Services.Users.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\obj\Debug\TheGarage.Services.Users.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\obj\Debug\TheGarage.Services.Users.pdb
-C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Users\obj\Debug\TheGarage.Services.Users.csprojResolveAssemblyReference.cache

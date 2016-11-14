@@ -1,0 +1,59 @@
+﻿<h2>Clients</h2>
+
+<div class="row">
+    <div class="col-md-10">
+        @(Html
+            .Kendo()
+            .ComboBox()
+            .Name("garages")
+            .DataTextField("Name")
+            .DataValueField("Id")
+            .Filter(FilterType.Contains)
+            .AutoBind(false)
+            .MinLength(3)
+            .Placeholder("Choose_or_enter_contest")
+            .Events(ev => ev.Change("selectContest"))
+            .DataSource(dataSource =>
+                {
+                    dataSource
+                        .Read(read =>
+                            {
+                                read.Action("Garages", "Clients")
+                                    .Data("additionalComboBoxData");
+                            })
+                        .ServerFiltering(true);
+                })
+            .HtmlAttributes(new { style = "width: 100%;" }))
+    </div>
+    <div class="col-md-2 text-right">
+        @Ajax.ActionLink("Clear", "RenderGrid", null, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "participants-grid", OnSuccess = "clearContestComboBox" }, new { @class = "btn btn-primary btn-sm" })
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12" id="clients-grid">
+        @Html.Partial("_Clients")
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function additionalComboBoxData() {
+            return {
+                text: $("#contests").data("kendoComboBox").input.val()
+            }
+        }
+
+        function selectContest() {
+            var contestId = $("#garages").val();
+
+            $.post('/Administration/Clients/RenderGrid/' + garageId, function (data) {
+                $("#clients-grid-grid").html(data);
+            });
+        }
+
+        function clearContestComboBox() {
+            $("#garages").data("kendoComboBox").value(null);
+        }
+    </script>
+}

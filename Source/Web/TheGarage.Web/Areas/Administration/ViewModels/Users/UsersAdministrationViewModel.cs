@@ -8,11 +8,10 @@
 
     using TheGarage.Data.Models;
     using AutoMapper.SelfConfig;
+    using Common;
 
-    public class UsersAdministrationViewModel : IMapFrom<User>, IMapTo<User>, IHaveCustomMappings
+    public class UsersAdministrationViewModel : AdministrationViewModel, IMapFrom<User>, IMapTo<User>, IHaveCustomMappings
     {
-        public bool IsHidden { get; set; }
-
         public string Id { get; set; }
 
         [DataType(DataType.EmailAddress)]
@@ -28,16 +27,11 @@
         [Display(Name = "Image")]
         public string UserImage { get; set; }
 
-        public DateTime CreatedOn { get; set; }
-
-        public DateTime? ModifiedOn { get; set; }
-
         [Display(Name = "Has Admin Rights")]
         public bool IsCurrentlyAdmin { get; set; }
 
         [Display(Name = "Has Moderator Rights")]
         public bool IsCurrentlyModerator { get; set; }
-
 
         public void CreateMappings(IMapperConfigurationExpression configuration)
         {

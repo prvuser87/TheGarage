@@ -17,6 +17,8 @@
 
         public Guid Id { get; set; }
 
+        public string Name { get; set; }
+
         public decimal DiscountInPercent { get; set; }
 
         public string DiscountCode { get; set; }

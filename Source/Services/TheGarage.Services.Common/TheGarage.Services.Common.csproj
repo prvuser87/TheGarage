@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\IClientAdministrationService.cs" />
+    <Compile Include="Administration\IGarageAdministrationService.cs" />
     <Compile Include="Administration\IUserAdministrationService.cs" />
     <Compile Include="Administration\IUserRoleAdministrationService.cs" />
     <Compile Include="Constants.cs" />
