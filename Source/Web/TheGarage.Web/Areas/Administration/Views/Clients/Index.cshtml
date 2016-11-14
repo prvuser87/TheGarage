@@ -26,7 +26,7 @@
             .HtmlAttributes(new { style = "width: 100%;" }))
     </div>
     <div class="col-md-2 text-right">
-        @Ajax.ActionLink("Clear", "RenderGrid", null, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "participants-grid", OnSuccess = "clearContestComboBox" }, new { @class = "btn btn-primary btn-sm" })
+        @Ajax.ActionLink("Clear", "RenderGrid", null, new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "clients-grid", OnSuccess = "clearContestComboBox" }, new { @class = "btn btn-primary btn-sm" })
     </div>
 </div>
 <br />
@@ -44,11 +44,11 @@
             }
         }
 
-        function selectContest() {
-            var contestId = $("#garages").val();
+        function selectGarage() {
+            var garageId = $("#garages").val();
 
             $.post('/Administration/Clients/RenderGrid/' + garageId, function (data) {
-                $("#clients-grid-grid").html(data);
+                $("#clients-grid").html(data);
             });
         }
 

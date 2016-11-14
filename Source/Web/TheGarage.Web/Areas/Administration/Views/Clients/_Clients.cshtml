@@ -17,7 +17,7 @@
         })
     .ToolBar(toolbar =>
     {
-        toolbar.Create().Text("Add_participant");
+        toolbar.Create().Text("Add_client");
         toolbar.Custom().Text("Back_to_navigation").Action("Navigation", "Administration", new { Area = "" }).Name("custom-toolbar-button");
         toolbar.Custom().Text("Export_to_excel").Name("custom-toolbar-button").HtmlAttributes(new { id = "export" }).Url(Url.Action("ExportToExcel", ControllerName, new { page = 1, pageSize = "~", filter = "!!", sort = "~" }));
     })
@@ -53,7 +53,7 @@
     }
 
     function onEdit(e) {
-        var garageComboBox = e.container.find('#GsarageId').data('kendoComboBox');
+        var garageComboBox = e.container.find('#GarageId').data('kendoComboBox');
         garageComboBox.value(null);
         garageComboBox.text(null);
     }
