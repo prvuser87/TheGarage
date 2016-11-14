@@ -24,7 +24,7 @@
     .Editable(editable =>
     {
         editable.Mode(GridEditMode.PopUp);
-        editable.Window(w => w.Title(ViewBag.Title));
+        editable.Window(w => w.Title("Title"));
         editable.DisplayDeleteConfirmation("Delete_prompt");
     })
     .ColumnMenu()
@@ -53,7 +53,7 @@
     }
 
     function onEdit(e) {
-        var garageComboBox = e.container.find('#ClientId').data('kendoComboBox');
+        var garageComboBox = e.container.find('#GsarageId').data('kendoComboBox');
         garageComboBox.value(null);
         garageComboBox.text(null);
     }

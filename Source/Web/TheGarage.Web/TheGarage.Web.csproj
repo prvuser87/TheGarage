@@ -294,7 +294,7 @@
     <Content Include="Areas\Administration\Views\Roles\EditorTemplates\AddUserToRole.cshtml" />
     <Content Include="Areas\Administration\Views\Roles\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Clients\Garage.cshtml" />
-    <Content Include="Areas\Administration\Views\Clients\EditorTemplates\ClientsComboBox.cshtml" />
+    <Content Include="Areas\Administration\Views\Clients\EditorTemplates\GaragesComboBox.cshtml" />
     <Content Include="Areas\Administration\Views\Clients\EditorTemplates\UsersComboBox.cshtml" />
     <Content Include="Areas\Administration\Views\Clients\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Clients\_Clients.cshtml" />
