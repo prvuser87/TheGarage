@@ -1,22 +1,24 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Mvc;
-
-using AutoMapper.QueryableExtensions;
-using Kendo.Mvc.Extensions;
-using Kendo.Mvc.UI;
-
-using TheGarage.Common;
-using TheGarage.Services.Common.Administration;
-using TheGarage.Web.Areas.Administration.ViewModels.Clients;
-using Model = TheGarage.Data.Models.Client;
-using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.Clients.ClientAdministrationViewModel;
-using AutoMapper;
-
-namespace TheGarage.Web.Areas.Administration.Controllers
+﻿namespace TheGarage.Web.Areas.Administration.Controllers
 {
+    using Newtonsoft.Json;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
+
+    using AutoMapper;
+    using AutoMapper.QueryableExtensions;
+    using Kendo.Mvc.Extensions;
+    using Kendo.Mvc.UI;
+
+    using TheGarage.Common;
+    using TheGarage.Services.Common.Administration;
+    using TheGarage.Web.Areas.Administration.ViewModels.Clients;
+
+    using Model = TheGarage.Data.Models.Client;
+    using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.Clients.ClientAdministrationViewModel;
+    using Data.Models;
+
     public class ClientsController : AdminController
     {
         private readonly IClientAdministrationService clientAdministrationService;
@@ -92,19 +94,15 @@ namespace TheGarage.Web.Areas.Administration.Controllers
                 return this.GridOperation(model, request);
             }
 
-            var dbClient = this.clientAdministrationService.Get(model.Id);
-            Mapper.Map<ViewModel, Model>(model, dbClient);
-            //this.userRoleAdministrationService.Update(dbClient);
-
-            dbClient.Garage = garage;
+            var dbClient = Mapper.Map<Client>(model);
             dbClient.User = user;
+            dbClient.Garage = garage;
 
             this.clientAdministrationService.Create(dbClient);
             var addedClient = this.clientAdministrationService.Get(dbClient.Id);
             model.Id = addedClient.Id;
             model.UserName = user.UserName;
             model.GarageName = garage.Name;
-            //this.UpdateAuditInfoValues(model, client);
 
             return this.GridOperation(model, request);
         }

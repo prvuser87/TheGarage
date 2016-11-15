@@ -1,0 +1,45 @@
+﻿@{
+    const string ControllerName = "Garages";
+}
+
+<h2 class="text-center">Garages  Administration</h2>
+
+@(Html.Kendo().Grid<TheGarage.Web.Areas.Administration.ViewModels.Garages.GarageAdministrationViewModel>()
+    .Name("DataGrid")
+    .Columns(columns =>
+    {
+        columns.Bound(model => model.Name);
+        columns.Bound(model => model.Address);
+        columns.Bound(model => model.Description);
+        columns.Bound(model => model.CompanyName);
+        columns.Bound(model => model.CreatedOn).Format("{0:dd/MM/yyyy HH:mm}").Hidden();
+        columns.Bound(model => model.ModifiedOn).Format("{0:dd/MM/yyyy HH:mm}").Hidden();
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+    })
+    .ToolBar(toolbar =>
+    {
+        toolbar.Create().Text("Create");
+    })
+    .Editable(editable => editable.Mode(GridEditMode.InLine))
+    .ColumnMenu()
+    .Pageable(x => x.Refresh(true))
+    .Sortable(x => x.Enabled(true).AllowUnsort(false))
+    .Filterable(x => x.Enabled(true))
+    .Reorderable(x => x.Columns(true))
+    .Scrollable()
+    .Resizable(x => x.Columns(true))
+    .DataSource(datasource => datasource
+        .Ajax()
+        .ServerOperation(true)
+        .Model(model =>
+        {
+            model.Id(m => m.Id);
+            model.Field(field => field.CompanyName).Editable(false);
+        })
+        .Sort(sort => sort.Add(x => x.Name))
+        .Create(create => create.Action("Create", ControllerName))
+        .Read(read => read.Action("Read", ControllerName))
+        .Update(update => update.Action("Update", ControllerName))
+        .Destroy(destroy => destroy.Action("Destroy", ControllerName))
+    )
+)

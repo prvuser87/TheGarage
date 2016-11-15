@@ -19,3 +19,4 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\bin\Debug\
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.pdb
+C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.csprojResolveAssemblyReference.cache

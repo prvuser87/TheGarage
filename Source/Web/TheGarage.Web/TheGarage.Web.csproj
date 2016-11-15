@@ -259,14 +259,14 @@
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\AdminController.cs" />
     <Compile Include="Areas\Administration\Controllers\ClientsController.cs" />
-    <Compile Include="Areas\Administration\Controllers\ContentsAdministrationController.cs" />
-    <Compile Include="Areas\Administration\Controllers\KendoGridAdministrationController.cs" />
+    <Compile Include="Areas\Administration\Controllers\GaragesController.cs" />
     <Compile Include="Areas\Administration\Controllers\RolesController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
     <Compile Include="Areas\Administration\ViewModels\Clients\GarageViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Clients\ClientAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Clients\UserViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Common\AdministrationViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Garages\GarageAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Roles\RoleAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Roles\UserInRoleAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Users\UsersAdministrationViewModel.cs" />
@@ -298,6 +298,7 @@
     <Content Include="Areas\Administration\Views\Clients\EditorTemplates\UsersComboBox.cshtml" />
     <Content Include="Areas\Administration\Views\Clients\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Clients\_Clients.cshtml" />
+    <Content Include="Areas\Administration\Views\Garages\Index.cshtml" />
     <None Include="Areas\Administration\Views\Users\Index.cshtml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -592,17 +593,9 @@
       <Project>{a7f90df9-5069-4ead-b393-51429c11ba90}</Project>
       <Name>TheGarage.Services.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Services\TheGarage.Services.Garages\TheGarage.Services.Garages.csproj">
-      <Project>{78f5517a-4042-426f-95e4-34b5e9515169}</Project>
-      <Name>TheGarage.Services.Garages</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Services\TheGarage.Services.Logic\TheGarage.Services.Logic.csproj">
       <Project>{e2b26380-5e49-475d-b2bb-7b21b8a1f265}</Project>
       <Name>TheGarage.Services.Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Services\TheGarage.Services.Users\TheGarage.Services.Users.csproj">
-      <Project>{23fad815-5391-4569-99df-f566f8ecd3b3}</Project>
-      <Name>TheGarage.Services.Users</Name>
     </ProjectReference>
     <ProjectReference Include="..\TheGarage.Web.Common\TheGarage.Web.Common.csproj">
       <Project>{4f059ac2-d39a-4450-82ce-289795eab9c8}</Project>

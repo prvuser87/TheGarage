@@ -1,22 +1,24 @@
-﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
-using Kendo.Mvc.Extensions;
-using Kendo.Mvc.UI;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Newtonsoft.Json;
-using System;
-using System.Linq;
-using System.Web.Mvc;
-using TheGarage.Common;
-using TheGarage.Data.Models;
-using TheGarage.Services.Common.Administration;
-using TheGarage.Web.Areas.Administration.ViewModels.Roles;
-using Model = Microsoft.AspNet.Identity.EntityFramework.IdentityRole;
-using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.Roles.RoleAdministrationViewModel;
-using ViewModelType = TheGarage.Web.Areas.Administration.ViewModels.Roles.UserInRoleAdministrationViewModel;
-
-namespace TheGarage.Web.Areas.Administration.Controllers
+﻿namespace TheGarage.Web.Areas.Administration.Controllers
 {
+    using Newtonsoft.Json;
+    using System;
+    using System.Linq;
+    using System.Web.Mvc;
+
+    using AutoMapper;
+    using AutoMapper.QueryableExtensions;
+    using Kendo.Mvc.Extensions;
+    using Kendo.Mvc.UI;
+    using Microsoft.AspNet.Identity.EntityFramework;
+
+    using TheGarage.Common;
+    using TheGarage.Services.Common.Administration;
+    using TheGarage.Web.Areas.Administration.ViewModels.Roles;
+
+    using Model = Microsoft.AspNet.Identity.EntityFramework.IdentityRole;
+    using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.Roles.RoleAdministrationViewModel;
+    using ViewModelType = TheGarage.Web.Areas.Administration.ViewModels.Roles.UserInRoleAdministrationViewModel;
+
     public class RolesController : AdminController
     {
         private readonly IUserRoleAdministrationService userRoleAdministrationService;
@@ -54,7 +56,7 @@ namespace TheGarage.Web.Areas.Administration.Controllers
                 model.RoleId = Guid.NewGuid().ToString();
 
                 var dbmodel = Mapper.Map<Model>(model);
-
+                
                 this.userRoleAdministrationService.Create(dbmodel);
 
 

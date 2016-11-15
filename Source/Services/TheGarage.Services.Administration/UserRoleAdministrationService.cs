@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TheGarage.Data;
-using TheGarage.Services.Common.Administration;
-
-namespace TheGarage.Services.Administration
+﻿namespace TheGarage.Services.Administration
 {
+    using System.Collections.Generic;
+
+    using Microsoft.AspNet.Identity.EntityFramework;
+
+    using TheGarage.Data;
+    using TheGarage.Services.Common.Administration;
+
     public class UserRoleAdministrationService : BaseAdministrationService, IUserRoleAdministrationService
     {
         public UserRoleAdministrationService(ITheGarageData data)

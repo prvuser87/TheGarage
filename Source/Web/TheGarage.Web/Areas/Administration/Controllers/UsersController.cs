@@ -5,18 +5,16 @@
     using System.Web.Mvc;
 
     using AutoMapper;
+    using AutoMapper.QueryableExtensions;
 
     using Kendo.Mvc.UI;
     using Kendo.Mvc.Extensions;
 
-    using TheGarage.Data.Models;
     using TheGarage.Services.Common.Administration;
-    using TheGarage.Web.Areas.Administration.ViewModels;
     using TheGarage.Web.Infrastructure.Caching;
 
     using Model = TheGarage.Data.Models.User;
     using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.Users.UsersAdministrationViewModel;
-    using AutoMapper.QueryableExtensions;
 
     public class UsersController : AdminController
     {

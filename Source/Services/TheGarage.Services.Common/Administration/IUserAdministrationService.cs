@@ -6,7 +6,7 @@
     using Data.Models;
     using Microsoft.AspNet.Identity.EntityFramework;
 
-    public interface IUserAdministrationService : IService
+    public interface IUserAdministrationService
     {
         void Create(User entity);
 

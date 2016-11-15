@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TheGarage.Services.Common.Administration
 {
-    public interface IUserRoleAdministrationService : IService
+    public interface IUserRoleAdministrationService
     {
         void Create(IdentityRole entity);
 

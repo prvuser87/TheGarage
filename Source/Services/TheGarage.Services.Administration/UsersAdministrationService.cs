@@ -1,6 +1,5 @@
 ﻿namespace TheGarage.Services.Administration
 {
-    using System;
     using System.Linq;
     using System.Collections.Generic;
 
@@ -10,7 +9,6 @@
     using TheGarage.Data;
     using TheGarage.Data.Models;
     using TheGarage.Services.Common.Administration;
-    using TheGarage.Common;
 
     public class UsersAdministrationService : BaseAdministrationService, IUserAdministrationService
     {

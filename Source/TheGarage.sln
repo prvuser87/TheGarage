@@ -31,10 +31,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Services.Common",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Services.Administration", "Services\TheGarage.Services.Administration\TheGarage.Services.Administration.csproj", "{C5FF5161-0332-4F20-9AC3-F453E0052588}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Services.Garages", "Services\TheGarage.Services.Garages\TheGarage.Services.Garages.csproj", "{78F5517A-4042-426F-95E4-34B5E9515169}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGarage.Services.Users", "Services\TheGarage.Services.Users\TheGarage.Services.Users.csproj", "{23FAD815-5391-4569-99DF-F566F8ECD3B3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,14 +77,6 @@ Global
 		{C5FF5161-0332-4F20-9AC3-F453E0052588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5FF5161-0332-4F20-9AC3-F453E0052588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5FF5161-0332-4F20-9AC3-F453E0052588}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78F5517A-4042-426F-95E4-34B5E9515169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78F5517A-4042-426F-95E4-34B5E9515169}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78F5517A-4042-426F-95E4-34B5E9515169}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78F5517A-4042-426F-95E4-34B5E9515169}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23FAD815-5391-4569-99DF-F566F8ECD3B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23FAD815-5391-4569-99DF-F566F8ECD3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23FAD815-5391-4569-99DF-F566F8ECD3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23FAD815-5391-4569-99DF-F566F8ECD3B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,7 +92,5 @@ Global
 		{E2B26380-5E49-475D-B2BB-7B21B8A1F265} = {9AD8D462-D2C7-43A6-AB7C-9D3D61ABF63C}
 		{A7F90DF9-5069-4EAD-B393-51429C11BA90} = {9AD8D462-D2C7-43A6-AB7C-9D3D61ABF63C}
 		{C5FF5161-0332-4F20-9AC3-F453E0052588} = {9AD8D462-D2C7-43A6-AB7C-9D3D61ABF63C}
-		{78F5517A-4042-426F-95E4-34B5E9515169} = {9AD8D462-D2C7-43A6-AB7C-9D3D61ABF63C}
-		{23FAD815-5391-4569-99DF-F566F8ECD3B3} = {9AD8D462-D2C7-43A6-AB7C-9D3D61ABF63C}
 	EndGlobalSection
 EndGlobal
