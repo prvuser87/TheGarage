@@ -6,7 +6,7 @@
     
     using TheGarage.Data.Models;
 
-    public class CompanyMenuRegisterItemViewModel : IMapFrom<Company>, IMapTo<Garage>
+    public class CompanyMenuRegisterItemViewModel : IMapFrom<Company>, IMapTo<Company>
     {
         public Guid Id { get; set; }
 

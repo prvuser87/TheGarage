@@ -10,6 +10,7 @@
     using Data.Models;
     using TheGarage.Web.Models;
     using Base;
+    using Data;
 
     [Authorize]
     public class AccountController : BaseController
@@ -17,8 +18,11 @@
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public AccountController()
+        private readonly ITheGarageData data;
+
+        public AccountController(ITheGarageData data)
         {
+            this.data = data;
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
@@ -138,6 +142,13 @@
         [AllowAnonymous]
         public ActionResult Register()
         {
+            var company = this.data.Companies.All().AsEnumerable();
+
+            var garages = this.data.Garages.All().AsEnumerable();
+
+            var model = new RegisterViewModel();
+
+
             return View();
         }
 
