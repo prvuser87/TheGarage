@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="BaseAdministrationService.cs" />
     <Compile Include="ClientsAdministrationService.cs" />
+    <Compile Include="CompanyAdministrationService.cs" />
     <Compile Include="GaragesAdministrationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRoleAdministrationService.cs" />
