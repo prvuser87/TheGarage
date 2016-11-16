@@ -80,11 +80,11 @@ namespace TheGarage.Web.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        // This property will hold all available Garages for selection
-        public IEnumerable<GarageMenuRegisterItemViewModel> Garages { get; set; }
-
         // This property will hold all available Company for selection
-        public IEnumerable<CompanyMenuRegisterItemViewModel> Companies { get; set; }
+        public string Companies { get; set; }
+
+        // This property will hold all available Garages for selection
+        public string Garages { get; set; }
     }
 
     public class ResetPasswordViewModel

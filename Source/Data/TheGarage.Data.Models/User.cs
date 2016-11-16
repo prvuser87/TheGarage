@@ -52,6 +52,10 @@
 
         public string ClientId { get; set; }
 
+        public string RequestedCompany { get; set; }
+
+        public string RequestedGarage { get; set; }
+
         public virtual Client Client { get; set; }
 
         public virtual ICollection<AccessLog> AccessLogs { get; set; }
