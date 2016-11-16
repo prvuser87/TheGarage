@@ -12,6 +12,7 @@
     using Base;
     using Data;
     using AutoMapper.QueryableExtensions;
+    using System;
 
     [Authorize]
     public class AccountController : BaseController
@@ -143,16 +144,7 @@
         [AllowAnonymous]
         public ActionResult Register()
         {
-            var allCompanies = this.data.Companies.All().AsQueryable().ProjectTo<CompanyMenuRegisterItemViewModel>().AsEnumerable();
-
-            var allGarages = this.data.Garages.All().AsQueryable().ProjectTo<GarageMenuRegisterItemViewModel>().AsEnumerable();
-
-            var model = new RegisterViewModel();
-
-            model.Companies = allCompanies;
-            model.Garages = allGarages;
-
-            return View(model);
+            return View();
         }
 
         //
@@ -414,6 +406,27 @@
         public ActionResult ExternalLoginFailure()
         {
             return View();
+        }
+
+        [AllowAnonymous]
+        public JsonResult GetCascadeCompany()
+        {
+            var allCompanies = this.data.Companies.All().ProjectTo<CompanyMenuRegisterItemViewModel>();
+
+            return Json(allCompanies, JsonRequestBehavior.AllowGet);
+        }
+
+        [AllowAnonymous]
+        public JsonResult GetCascadeGarages(Guid? id)
+        {
+            var allGarages = this.data.Garages.All().ProjectTo<GarageMenuRegisterItemViewModel>();
+            
+            if (id != null)
+            {
+                allGarages = allGarages.Where(p => p.Id == id);
+            }
+
+            return Json(allGarages, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)

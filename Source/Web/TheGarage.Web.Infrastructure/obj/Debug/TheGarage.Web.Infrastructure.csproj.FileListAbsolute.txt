@@ -3,8 +3,6 @@ C:\Projects\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Web.Infr
 C:\Projects\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Projects\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.dll
 C:\Projects\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.pdb
-C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Web.Infrastructure.dll.config
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Web.Infrastructure.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Web.Infrastructure.pdb
@@ -13,6 +11,7 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bi
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\DelegateDecompiler.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\DelegateDecompiler.EntityFramework.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
@@ -34,6 +33,7 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bi
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Data.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\AutoMapper.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\AutoMapper.EF6.xml
+C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

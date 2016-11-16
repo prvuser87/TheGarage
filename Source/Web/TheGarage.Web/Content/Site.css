@@ -20,5 +20,12 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 20%;
+}
+.k-dropdown{
+    width: 20%;
+}
+.k-readonly
+{
+    color: gray;
 }

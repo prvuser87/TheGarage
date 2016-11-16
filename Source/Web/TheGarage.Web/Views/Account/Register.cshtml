@@ -29,12 +29,77 @@
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
         </div>
     </div>
+
+    <div class="form-group k-content">
+        @Html.LabelFor(m => m.Companies, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @(Html.Kendo().DropDownList()
+              .Name("companies")
+              .OptionLabel("Select company...")
+              .DataTextField("Name")
+              .DataValueField("Id")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("GetCascadeCompany", "Account");
+                  });
+              })
+            )
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Garages, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @(Html.Kendo().DropDownList()
+              .Name("garages")
+              .OptionLabel("Select garages...")
+              .DataTextField("Name")
+              .DataValueField("Id")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("GetCascadeGarages", "Account")
+                          .Data("filterProducts");
+                  })
+                  .ServerFiltering(true);
+              })
+              .Enable(false)
+              .AutoBind(false)
+              .CascadeFrom("companies")
+            )
+            <script>
+            function filterProducts() {
+                return {
+                    categories: $("#companies").val()
+                };
+            }
+            </script>
+        </div>
+    </div>
+
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Register" />
         </div>
     </div>
 }
+
+<script>
+    $(document).ready(function () {
+        var categories = $("#companies").data("kendoDropDownList"),
+            products = $("#products").data("kendoDropDownList")
+
+        $("#get").click(function () {
+            var companyInfo = "\nCompany: { id: " + companies.value() + ", name: " + companies.text() + " }",
+                garageInfo = "\nGarage: { id: " + garages.value() + ", name: " + garages.text() + " }";
+
+            alert("Order details:\n" + companyInfo + garageInfo);
+        });
+    });
+</script>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
