@@ -1,18 +1,16 @@
 ﻿@{
-    const string ControllerName = "Garages";
+    const string ControllerName = "Company";
 }
 
-<h2 class="text-center">Garages  Administration</h2>
+<h2 class="text-center">Company  Administration</h2>
 
-@(Html.Kendo().Grid<TheGarage.Web.Areas.Administration.ViewModels.Garages.GarageAdministrationViewModel>()
+@(Html.Kendo().Grid<TheGarage.Web.Areas.Administration.ViewModels.Companies.CompanyAdministrationViewModel>()
     .Name("DataGrid")
     .Columns(columns =>
     {
         columns.Bound(model => model.Name);
-        columns.Bound(model => model.Address);
         columns.Bound(model => model.Description);
-        //columns.ForeignKey(p => p.CompanyId, (System.Collections.IEnumerable)ViewData["company"], "CompanyId", "CompanyName").Title("Company").Width(200);
-        columns.Bound(model => model.CompanyName);
+        columns.Bound(p => p.Garages).ClientTemplate("#=Garage.GarageName#").Width(180);
         columns.Bound(model => model.CreatedOn).Format("{0:dd/MM/yyyy HH:mm}").Hidden();
         columns.Bound(model => model.ModifiedOn).Format("{0:dd/MM/yyyy HH:mm}").Hidden();
         columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
@@ -35,7 +33,8 @@
         .Model(model =>
         {
             model.Id(m => m.Id);
-            //model.Field(p => p.CompanyId).DefaultValue(1);
+            //model.Field(field => field.CompanyName).Editable(false);
+            //model.Field(p => p.Garages).DefaultValue( ViewData["defaultGarages"] as Kendo.Mvc.Examples.Models.CategoryViewModel);
         })
         .Sort(sort => sort.Add(x => x.Name))
         .Create(create => create.Action("Create", ControllerName))

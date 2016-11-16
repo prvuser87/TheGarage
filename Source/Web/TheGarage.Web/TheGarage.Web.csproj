@@ -259,6 +259,7 @@
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\AdminController.cs" />
     <Compile Include="Areas\Administration\Controllers\ClientsController.cs" />
+    <Compile Include="Areas\Administration\Controllers\CompanyController.cs" />
     <Compile Include="Areas\Administration\Controllers\GaragesController.cs" />
     <Compile Include="Areas\Administration\Controllers\RolesController.cs" />
     <Compile Include="Areas\Administration\Controllers\UsersController.cs" />
@@ -266,6 +267,7 @@
     <Compile Include="Areas\Administration\ViewModels\Clients\ClientAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Clients\UserViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Common\AdministrationViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Companies\CompanyAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Garages\GarageAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Roles\RoleAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Roles\UserInRoleAdministrationViewModel.cs" />
@@ -299,6 +301,7 @@
     <Content Include="Areas\Administration\Views\Clients\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Clients\_Clients.cshtml" />
     <Content Include="Areas\Administration\Views\Garages\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Company\Index.cshtml" />
     <None Include="Areas\Administration\Views\Users\Index.cshtml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -529,7 +532,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Views\Admin\" />
     <Folder Include="Areas\CompanyManagers\Controllers\" />
     <Folder Include="Areas\CompanyManagers\Models\" />
     <Folder Include="Areas\CompanyManagers\Views\Shared\" />
