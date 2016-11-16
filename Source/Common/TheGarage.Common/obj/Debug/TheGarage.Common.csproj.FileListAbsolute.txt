@@ -4,6 +4,5 @@ C:\Projects\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.dll
 C:\Projects\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\bin\Debug\TheGarage.Common.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\bin\Debug\TheGarage.Common.pdb
-C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.pdb
