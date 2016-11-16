@@ -81,9 +81,9 @@ namespace TheGarage.Web.Models
         public string ConfirmPassword { get; set; }
 
         // This property will hold all available Garages for selection
-        public IEnumerable<CompanyMenuRegisterItemViewModel> Garages { get; set; }
+        public IEnumerable<GarageMenuRegisterItemViewModel> Garages { get; set; }
 
-        // This property will hold all available Garages for selection
+        // This property will hold all available Company for selection
         public IEnumerable<CompanyMenuRegisterItemViewModel> Companies { get; set; }
     }
 

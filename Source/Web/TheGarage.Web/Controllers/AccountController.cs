@@ -11,6 +11,7 @@
     using TheGarage.Web.Models;
     using Base;
     using Data;
+    using AutoMapper.QueryableExtensions;
 
     [Authorize]
     public class AccountController : BaseController
@@ -142,14 +143,16 @@
         [AllowAnonymous]
         public ActionResult Register()
         {
-            var company = this.data.Companies.All().AsEnumerable();
+            var allCompanies = this.data.Companies.All().AsQueryable().ProjectTo<CompanyMenuRegisterItemViewModel>().AsEnumerable();
 
-            var garages = this.data.Garages.All().AsEnumerable();
+            var allGarages = this.data.Garages.All().AsQueryable().ProjectTo<GarageMenuRegisterItemViewModel>().AsEnumerable();
 
             var model = new RegisterViewModel();
 
+            model.Companies = allCompanies;
+            model.Garages = allGarages;
 
-            return View();
+            return View(model);
         }
 
         //
