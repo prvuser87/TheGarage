@@ -73,8 +73,19 @@
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (!ModelState.IsValid)
+            var IsApproved = this.data.Clients.All().Any(x => x.User.Email == model.Email && x.IsApproved == true);
+
+            // Delete it in production!!!
+            IsApproved = true;
+
+
+            if (!ModelState.IsValid || !IsApproved)
             {
+                if (!IsApproved)
+                {
+                    ModelState.AddModelError("", "Invalid login or Not approved!.");
+                    return View(model);
+                }
                 return View(model);
             }
 
