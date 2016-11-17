@@ -62,7 +62,7 @@
                   source.Read(read =>
                   {
                       read.Action("GetCascadeGarages", "Account")
-                          .Data("filterProducts");
+                          .Data("filterGarages");
                   })
                   .ServerFiltering(true);
               })
@@ -70,13 +70,7 @@
               .AutoBind(false)
               .CascadeFrom("companies")
             )
-            <script>
-            function filterProducts() {
-                return {
-                    categories: $("#companies").val()
-                };
-            }
-            </script>
+
         </div>
     </div>
 
@@ -88,9 +82,17 @@
 }
 
 <script>
+            function filterGarages() {
+                return {
+                    companies: $("#companies").val()
+                };
+            }
+</script>
+
+<script>
     $(document).ready(function () {
-        var categories = $("#companies").data("kendoDropDownList"),
-            products = $("#products").data("kendoDropDownList")
+        var companies = $("#companies").data("kendoDropDownList"),
+            garages = $("#garages").data("kendoDropDownList")
 
         $("#get").click(function () {
             var companyInfo = "\nCompany: { id: " + companies.value() + ", name: " + companies.text() + " }",
@@ -101,6 +103,3 @@
     });
 </script>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

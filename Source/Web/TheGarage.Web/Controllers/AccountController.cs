@@ -417,13 +417,13 @@
         }
 
         [AllowAnonymous]
-        public JsonResult GetCascadeGarages(Guid? id)
+        public JsonResult GetCascadeGarages(Guid? companies)
         {
             var allGarages = this.data.Garages.All().ProjectTo<GarageMenuRegisterItemViewModel>();
             
-            if (id != null)
+            if (companies != null)
             {
-                allGarages = allGarages.Where(p => p.Id == id);
+                allGarages = allGarages.Where(p => p.CompanyId == companies);
             }
 
             return Json(allGarages, JsonRequestBehavior.AllowGet);

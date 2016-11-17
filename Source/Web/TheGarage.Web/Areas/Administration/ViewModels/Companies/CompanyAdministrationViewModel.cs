@@ -10,7 +10,7 @@
     using TheGarage.Web.Areas.Administration.ViewModels.Garages;
     using TheGarage.Web.Areas.Administration.ViewModels.Common;
 
-    public class CompanyAdministrationViewModel : AdministrationViewModel, IMapFrom<Company>, IMapTo<Company>, IHaveCustomMappings
+    public class CompanyAdministrationViewModel : AdministrationViewModel, IMapFrom<Company>, IMapTo<Company>
     {
         public Guid Id { get; set; }
 
@@ -21,11 +21,5 @@
         public string Description { get; set; }
 
         public IEnumerable<GarageAdministrationViewModel> Garages { get; set; }
-
-        public void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap<Company, CompanyAdministrationViewModel>()
-                .ForMember(m => m.Garages, opt => opt.MapFrom(u => u.Garages));
-        }
     }
 }
