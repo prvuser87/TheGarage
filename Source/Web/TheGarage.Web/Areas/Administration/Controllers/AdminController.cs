@@ -8,5 +8,6 @@
     [Authorize(Roles = GlobalConstants.AdminRole)]
     public abstract class AdminController : BaseController
     {
+       
     }
 }

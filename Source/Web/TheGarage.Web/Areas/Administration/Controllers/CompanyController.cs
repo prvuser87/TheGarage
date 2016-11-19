@@ -14,6 +14,7 @@
 
     using Model = TheGarage.Data.Models.Company;
     using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.Companies.CompanyAdministrationViewModel;
+    using System;
 
     public class CompanyController : AdminController
     {

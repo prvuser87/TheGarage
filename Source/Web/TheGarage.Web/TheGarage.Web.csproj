@@ -272,6 +272,9 @@
     <Compile Include="Areas\Administration\ViewModels\Roles\RoleAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Roles\UserInRoleAdministrationViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Users\UsersAdministrationViewModel.cs" />
+    <Compile Include="Areas\Clients\ClientsAreaRegistration.cs" />
+    <Compile Include="Areas\Clients\Controllers\DetailsController.cs" />
+    <Compile Include="Areas\Clients\Models\DetailsViewModel.cs" />
     <Compile Include="Areas\CompanyManagers\CompanyManagersAreaRegistration.cs" />
     <Compile Include="Areas\GarageManagers\GarageManagersAreaRegistration.cs" />
     <Compile Include="Areas\Garages\Controllers\GaragesController.cs" />
@@ -478,6 +481,10 @@
     <Content Include="Areas\Garages\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Garages\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Garages\Views\List\Index.cshtml" />
+    <Content Include="Areas\Clients\Views\web.config" />
+    <Content Include="Areas\Clients\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Clients\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Clients\Views\Details\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -56,7 +56,10 @@
                                     <li>@Html.ActionLink("Garages", GlobalConstants.Index, "Garages", new { area = "Administration" }, null)</li>
                                     <li class="divider"></li>
                                     <li class="dropdown-header">Users</li>
-                                    <li>@Html.ActionLink("Users", GlobalConstants.Index, "Users", new { area = "Administration" }, null)</li>
+                                    @if (false)
+                                    {
+                                        <li>@Html.ActionLink("Users", GlobalConstants.Index, "Users", new { area = "Administration" }, null)</li>
+                                    }
                                     <li>@Html.ActionLink("Clients", GlobalConstants.Index, "Clients", new { area = "Administration" }, null)</li>
                                     <li>@Html.ActionLink("Roles", GlobalConstants.Index, "Roles", new { area = "Administration" }, null)</li>
                                     <li class="divider"></li>
@@ -98,6 +101,19 @@
                                     <li>@Html.ActionLink("Users", GlobalConstants.Index, "Users", new { area = "GarageManager" }, null)</li>
                                 </ul>
                             </li>
+                        }
+                        if (User.IsInRole(GlobalConstants.ClientRole) && !User.IsInRole(GlobalConstants.GarageManagerRole) && !User.IsInRole(GlobalConstants.AdminRole) && !User.IsInRole(GlobalConstants.CompanyManagerRole))
+                        {
+                            <li class="dropdown">
+                                <a href="/garage/Navigation" class="dropdown-toggle" data-toggle="dropdown">
+                                    Garage
+                                    <strong class="caret"></strong>
+                                </a>
+                            </li>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">Garages</li>
+                                <li>@Html.ActionLink("Garages", GlobalConstants.Index, "Garages", new { area = "CompanyManager" }, null)</li>
+                            </ul>
                         }
                     }
                 </ul>

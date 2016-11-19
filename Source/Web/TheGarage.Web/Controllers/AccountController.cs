@@ -94,8 +94,17 @@
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
+                
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    var user = this.data.Users.All().Where(x => x.Email == model.Email).ToArray();
+                    if (user[0].City == null)
+                    {
+                        return RedirectToAction("Details", "Clients");
+                    }
+                    else
+                    {
+                        return RedirectToLocal(returnUrl);
+                    }
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
