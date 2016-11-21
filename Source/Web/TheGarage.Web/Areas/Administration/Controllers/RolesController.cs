@@ -15,7 +15,7 @@
     using TheGarage.Services.Common.Administration;
     using TheGarage.Web.Areas.Administration.ViewModels.Roles;
 
-    using Model = Microsoft.AspNet.Identity.EntityFramework.IdentityRole;
+    using Model = TheGarage.Data.Models.ApplicationRole;
     using ViewModel = TheGarage.Web.Areas.Administration.ViewModels.Roles.RoleAdministrationViewModel;
     using ViewModelType = TheGarage.Web.Areas.Administration.ViewModels.Roles.UserInRoleAdministrationViewModel;
 
@@ -128,12 +128,12 @@
             var user = this.userAdministrationService.Get(userId);
             var role = this.userRoleAdministrationService.Read().FirstOrDefault(r => r.Id == id);
 
-            var userToRole = new IdentityUserRole();
+            //var userToRole = new IdentityUserRole();
 
-            userToRole.RoleId = role.Id;
-            userToRole.UserId = userId;
+            //userToRole.RoleId = role.Id;
+            //userToRole.UserId = userId;
 
-            this.userAdministrationService.AddUserToRole(userToRole);
+            this.userAdministrationService.AddUserToRole("66305dc8-0198-4226-af02-c80520118c88", "Administrator");
 
             var result = new UserInRoleAdministrationViewModel
             {

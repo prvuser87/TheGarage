@@ -4,19 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheGarage.Data.Models;
 
 namespace TheGarage.Services.Common.Administration
 {
     public interface IUserRoleAdministrationService
     {
-        void Create(IdentityRole entity);
+        void Create(ApplicationRole entity);
 
         void Delete(object id);
 
-        void Update(IdentityRole entity);
+        void Update(ApplicationRole entity);
 
-        IEnumerable<IdentityRole> Read();
+        IEnumerable<ApplicationRole> Read();
 
-        IdentityRole Get(object id);
+        ApplicationRole Get(object id);
     }
 }

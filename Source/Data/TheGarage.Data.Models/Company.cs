@@ -7,12 +7,12 @@
 
     public class Company : DeletableEntity
     {
-        private ICollection<Garage> garages;
+        private ICollection<State> states;
 
         public Company()
         {
             this.Id = Guid.NewGuid();
-            this.garages = new HashSet<Garage>();
+            this.states = new HashSet<State>();
         }
 
         public Guid Id { get; set; }
@@ -22,7 +22,7 @@
         public byte[] Logo { get; set; }
 
         public string Description { get; set; }
-
-        public ICollection<Garage> Garages { get; set; }
+        
+        public virtual ICollection<State> States { get; set; }
     }
 }

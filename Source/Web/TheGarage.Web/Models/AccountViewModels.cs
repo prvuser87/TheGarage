@@ -80,8 +80,11 @@ namespace TheGarage.Web.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        // This property will hold all available Company for selection
-        public string Companies { get; set; }
+        // This property will hold all available States for selection
+        public string States { get; set; }
+
+        // This property will hold all available Cities for selection
+        public string Cities { get; set; }
 
         // This property will hold all available Garages for selection
         public string Garages { get; set; }

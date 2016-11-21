@@ -26,6 +26,12 @@
 
         IDbSet<Transaction> Transactions { get; set; }
 
+        IDbSet<HasPermission> HasPermissions { get; set; }
+
+        IDbSet<City> Cities { get; set; }
+
+        IDbSet<State> States { get; set; }
+
         DbContext DbContext { get; }
 
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;

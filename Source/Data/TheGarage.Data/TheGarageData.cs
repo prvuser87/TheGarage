@@ -7,6 +7,7 @@
     using Common.Repositories;
     using Models;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using System.Web.Configuration;
 
     public class TheGarageData : ITheGarageData
     {
@@ -49,11 +50,43 @@
             }
         }
 
+        public IDeletableEntityRepository<State> States
+        {
+            get
+            {
+                return this.GetDeletableEntityRepository<State>();
+            }
+        }
+
+        public IDeletableEntityRepository<City> Cities
+        {
+            get
+            {
+                return this.GetDeletableEntityRepository<City>();
+            }
+        }
+
         public IDeletableEntityRepository<Client> Clients
         {
             get
             {
                 return this.GetDeletableEntityRepository<Client>();
+            }
+        }
+
+        public IRepository<ApplicationRole> Roles
+        {
+            get
+            {
+                return this.GetRepository<ApplicationRole>();
+            }
+        }
+
+        public IDeletableEntityRepository<HasPermission> HasPermissions
+        {
+            get
+            {
+                return this.GetDeletableEntityRepository<HasPermission>();
             }
         }
 
@@ -105,21 +138,20 @@
             }
         }
 
-        public IRepository<IdentityRole> Roles
+
+        public T GetDbContext<T>() where T : DbContext, ITheGarageDbContext
         {
-            get
-            {
-                return this.GetRepository<IdentityRole>();
-            }
+            return this.context as T;
         }
 
-        public IRepository<IdentityUserRole> UserRole
-        {
-            get
-            {
-                return this.GetRepository<IdentityUserRole>();
-            }
-        }
+
+        //public IRepository<IdentityUserRole> UserRole
+        //{
+        //    get
+        //    {
+        //        return this.GetRepository<IdentityUserRole>();
+        //    }
+        //}
 
         public void SaveChanges()
         {

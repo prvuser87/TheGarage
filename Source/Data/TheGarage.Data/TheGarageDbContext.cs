@@ -32,6 +32,12 @@
 
         public IDbSet<Transaction> Transactions { get; set; }
 
+        public IDbSet<HasPermission> HasPermissions { get; set; }
+
+        public IDbSet<City> Cities { get; set; }
+
+        public IDbSet<State> States { get; set; }
+
         public DbContext DbContext
         {
             get

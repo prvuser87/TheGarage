@@ -31,21 +31,46 @@
     </div>
 
     <div class="form-group k-content">
-        @Html.LabelFor(m => m.Companies, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.States, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @(Html.Kendo().DropDownList()
-              .Name("companies")
-              .OptionLabel("Select company...")
+              .Name("states")
+              .OptionLabel("Select state...")
               .DataTextField("Name")
               .DataValueField("Id")
               .DataSource(source =>
               {
                   source.Read(read =>
                   {
-                      read.Action("GetCascadeCompany", "Account");
+                      read.Action("GetCascadeState", "Account");
                   });
               })
             )
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cities, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @(Html.Kendo().DropDownList()
+              .Name("cities")
+              .OptionLabel("Select city...")
+              .DataTextField("Name")
+              .DataValueField("Id")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("GetCascadeCities", "Account")
+                          .Data("filterCities");
+                  })
+                  .ServerFiltering(true);
+              })
+              .Enable(false)
+              .AutoBind(false)
+              .CascadeFrom("states")
+            )
+
         </div>
     </div>
 
@@ -54,7 +79,7 @@
         <div class="col-md-10">
             @(Html.Kendo().DropDownList()
               .Name("garages")
-              .OptionLabel("Select garages...")
+              .OptionLabel("Select garage...")
               .DataTextField("Name")
               .DataValueField("Id")
               .DataSource(source =>
@@ -68,7 +93,7 @@
               })
               .Enable(false)
               .AutoBind(false)
-              .CascadeFrom("companies")
+              .CascadeFrom("cities")
             )
 
         </div>
@@ -82,24 +107,26 @@
 }
 
 <script>
-            function filterGarages() {
+            function filterCities() {
                 return {
-                    companies: $("#companies").val()
+                    states: $("#states").val()
+                };
+            }
+</script>
+
+<script>
+    function filterGarages() {
+                return {
+                    cities: $("#cities").val()
                 };
             }
 </script>
 
 <script>
     $(document).ready(function () {
-        var companies = $("#companies").data("kendoDropDownList"),
+        var states = $("#states").data("kendoDropDownList"),
+            cities = $("#cities").data("kendoDropDownList")
             garages = $("#garages").data("kendoDropDownList")
-
-        $("#get").click(function () {
-            var companyInfo = "\nCompany: { id: " + companies.value() + ", name: " + companies.text() + " }",
-                garageInfo = "\nGarage: { id: " + garages.value() + ", name: " + garages.text() + " }";
-
-            alert("Order details:\n" + companyInfo + garageInfo);
-        });
     });
 </script>
 

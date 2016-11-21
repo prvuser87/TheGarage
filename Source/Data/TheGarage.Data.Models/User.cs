@@ -21,6 +21,7 @@
         {
             // This will prevent UserManager.CreateAsync from causing exception
             this.CreatedOn = DateTime.Now;
+            this.RequestDate = DateTime.Now;
             this.accessLog = new HashSet<AccessLog>();
         }
 
@@ -52,11 +53,21 @@
 
         public string ClientId { get; set; }
 
-        public string RequestedCompany { get; set; }
+        public bool IsCompany { get; set; }
 
         public string RequestedGarage { get; set; }
 
+        public int PlacesCount { get; set; }
+
+        public string CustomMessage { get; set; }
+
+        public DateTime RequestDate { get; set; }
+
         public virtual Client Client { get; set; }
+
+        public string RequestedState { get; set; }
+
+        public string RequestedCity { get; set; }
 
         public virtual ICollection<AccessLog> AccessLogs { get; set; }
 

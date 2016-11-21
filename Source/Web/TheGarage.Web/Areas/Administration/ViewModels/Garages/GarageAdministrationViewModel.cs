@@ -34,17 +34,13 @@
         [HiddenInput(DisplayValue = false)]
         public float GoogleMapLng { get; set; }
 
-        public string CompanyId { get; set; }
 
-        public string CompanyName { get; set; }
 
         public IEnumerable<ClientAdministrationViewModel> Clients { get; set; }
 
         public void CreateMappings(IMapperConfigurationExpression configuration)
         {
             configuration.CreateMap<Garage, GarageAdministrationViewModel>()
-                .ForMember(m => m.CompanyId, opt => opt.MapFrom(u => u.Company.Id))
-              .ForMember(m => m.CompanyName, opt => opt.MapFrom(u => u.Company.Name))
               .ForMember(u => u.Clients, opt => opt.MapFrom(u => u.Clients));
         }
     }

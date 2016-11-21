@@ -33,6 +33,7 @@ namespace TheGarage.Web.Controllers
             return View();
         }
 
+        [HasPermission("PermissionA")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

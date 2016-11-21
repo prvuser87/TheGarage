@@ -7,9 +7,11 @@
 
     public interface ITheGarageData
     {
-        IRepository<IdentityUserRole> UserRole { get; }
+        TContext GetDbContext<TContext>() where TContext : DbContext, ITheGarageDbContext;
 
-        IRepository<IdentityRole> Roles { get; }
+        IRepository<ApplicationRole> Roles { get; }
+
+        IDeletableEntityRepository<HasPermission> HasPermissions { get; }
 
         IDeletableEntityRepository<User> Users { get; }
 
@@ -28,6 +30,10 @@
         IDeletableEntityRepository<RequestedGarage> RequestedGarages { get; }
 
         IDeletableEntityRepository<Transaction> Transactions { get; }
+
+        IDeletableEntityRepository<State> States { get; }
+
+        IDeletableEntityRepository<City> Cities { get; }
 
         DbContext Context { get; }
 

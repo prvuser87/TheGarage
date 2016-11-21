@@ -16,7 +16,7 @@
 
         IEnumerable<User> Read();
 
-        void AddUserToRole(IdentityUserRole entity);
+        void AddUserToRole(string userId, string role);
 
         User Get(object id);
 

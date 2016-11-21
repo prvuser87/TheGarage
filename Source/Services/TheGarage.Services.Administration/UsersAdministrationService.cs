@@ -9,6 +9,8 @@
     using TheGarage.Data;
     using TheGarage.Data.Models;
     using TheGarage.Services.Common.Administration;
+    using System.Web;
+    using Microsoft.AspNet.Identity.Owin;
 
     public class UsersAdministrationService : BaseAdministrationService, IUserAdministrationService
     {
@@ -46,9 +48,12 @@
 
 
 
-        public void AddUserToRole(IdentityUserRole entity)
+        public void AddUserToRole(string userId, string role)
         {
-            this.Data.UserRole.Add(entity);
+            var userManager = new UserManager<User>(new UserStore<User>(this.Data.GetDbContext<TheGarageDbContext>()));
+
+            userManager.AddToRole("66305dc8-0198-4226-af02-c80520118c88", "Administrator");
+            //this.Data.Roles.Add(entity);
             this.Data.SaveChanges();
         }
 

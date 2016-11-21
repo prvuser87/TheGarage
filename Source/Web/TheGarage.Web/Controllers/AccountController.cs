@@ -94,7 +94,6 @@
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
-                
                 case SignInStatus.Success:
                     var user = this.data.Users.All().Where(x => x.Email == model.Email).ToArray();
                     if (user[0].City == null)
@@ -176,7 +175,8 @@
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Email, Email = model.Email, RequestedCompany = model.Companies, RequestedGarage = model.Garages};
+                var user = new User { UserName = model.Email, Email = model.Email, RequestedState = model.States, RequestedCity = model.Cities, RequestedGarage = model.Garages };
+                //var user = new User { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -429,21 +429,34 @@
         }
 
         [AllowAnonymous]
-        public JsonResult GetCascadeCompany()
+        public JsonResult GetCascadeState()
         {
-            var allCompanies = this.data.Companies.All().ProjectTo<CompanyMenuRegisterItemViewModel>();
+            var allStates = this.data.States.All().ProjectTo<StateMenuRegisterItemViewModel>();
 
-            return Json(allCompanies, JsonRequestBehavior.AllowGet);
+            return Json(allStates, JsonRequestBehavior.AllowGet);
         }
 
         [AllowAnonymous]
-        public JsonResult GetCascadeGarages(Guid? companies)
+        public JsonResult GetCascadeCities(Guid? state)
+        {
+            var allCities = this.data.Cities.All().ProjectTo<CityMenuRegisterItemViewModel>();
+            
+            if (state != null)
+            {
+                allCities = allCities.Where(p => p.Id == state);
+            }
+
+            return Json(allCities, JsonRequestBehavior.AllowGet);
+        }
+
+        [AllowAnonymous]
+        public JsonResult GetCascadeGarages(Guid? cities)
         {
             var allGarages = this.data.Garages.All().ProjectTo<GarageMenuRegisterItemViewModel>();
-            
-            if (companies != null)
+
+            if (cities != null)
             {
-                allGarages = allGarages.Where(p => p.CompanyId == companies);
+                allGarages = allGarages.Where(p => p.Id == cities);
             }
 
             return Json(allGarages, JsonRequestBehavior.AllowGet);

@@ -36,9 +36,13 @@
     
         public float GoogleMapLng { get; set; }
 
-        public Guid CompanyId { get; set; }
+        public int TakenPlaces { get; set; }
 
-        public virtual Company Company { get; set; }
+        public int Capacity { get; set; }
+
+        public Guid CityId { get; set; }
+
+        public City Cities { get; set; }
 
         public virtual ICollection<Client> Clients { get; set; }
 

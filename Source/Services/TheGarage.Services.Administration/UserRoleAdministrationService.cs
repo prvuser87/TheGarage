@@ -6,6 +6,7 @@
 
     using TheGarage.Data;
     using TheGarage.Services.Common.Administration;
+    using Data.Models;
 
     public class UserRoleAdministrationService : BaseAdministrationService, IUserRoleAdministrationService
     {
@@ -14,7 +15,7 @@
         {
         }
 
-        public void Create(IdentityRole entity)
+        public void Create(ApplicationRole entity)
         {
             this.Data.Roles.Add(entity);
             this.Data.SaveChanges();
@@ -27,17 +28,17 @@
             this.Data.SaveChanges();
         }
 
-        public IdentityRole Get(object id)
+        public ApplicationRole Get(object id)
         {
             return this.Data.Roles.GetById(id);
         }
 
-        public IEnumerable<IdentityRole> Read()
+        public IEnumerable<ApplicationRole> Read()
         {
             return this.Data.Roles.All();
         }
 
-        public void Update(IdentityRole entity)
+        public void Update(ApplicationRole entity)
         {
             this.Data.Roles.Update(entity);
             this.Data.SaveChanges();
