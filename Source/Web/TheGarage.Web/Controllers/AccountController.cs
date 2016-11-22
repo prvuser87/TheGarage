@@ -1,4 +1,5 @@
-﻿namespace TheGarage.Web.Controllers
+﻿using System.Web.Mvc;
+namespace TheGarage.Web.Controllers
 {
     using System.Linq;
     using System.Threading.Tasks;
@@ -13,13 +14,15 @@
     using Data;
     using AutoMapper.QueryableExtensions;
     using System;
+    using Services.Administration;
+    using TheGarage.Common;
 
     [Authorize]
     public class AccountController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
+        
         private readonly ITheGarageData data;
 
         public AccountController(ITheGarageData data)
@@ -32,6 +35,7 @@
             UserManager = userManager;
             SignInManager = signInManager;
         }
+
 
         public ApplicationSignInManager SignInManager
         {
@@ -167,15 +171,27 @@
         }
 
         //
-        // POST: /Account/Register
+        // POST: /Account/RegisterUser
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> PersonalRegister(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Email, Email = model.Email, RequestedState = model.States, RequestedCity = model.Cities, RequestedGarage = model.Garages };
+                var user = new User
+                {   IsCompany = false,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    UserName = model.Email,
+                    Email = model.Email,
+                    RequestDate = model.RequestDate,
+                    PlacesCount = model.PlacesCount,
+                    PhoneNumber = model.PhoneNumber,
+                    RequestedState = model.States,
+                    RequestedCity = model.Cities,
+                    RequestedGarage = model.Garages };
+
                 //var user = new User { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -187,14 +203,74 @@
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
+                    
+                    //System.Web.Security.Roles.AddUserToRole(model.Email, GlobalConstants.PendingClientRole);
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return PartialView(model);
+        }
+
+        // POST: /Account/RegisterCompany
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> CompanyRegister(CompanyRegisterViewModel model)
+        {
+            TheGarageDbContext context = new TheGarageDbContext();
+            TheGarageData garageData = new TheGarageData(context);
+            UserRoleAdministrationService userRoleService = new UserRoleAdministrationService(garageData);
+            ApplicationRole role = new ApplicationRole();
+            role.Name = GlobalConstants.PendingClientRole;
+
+            if (ModelState.IsValid)
+            {
+                var user = new User
+                {
+                    IsCompany = true,
+                    FirstName = model.CompanyName,
+                    UserName = model.Email,
+                    Email = model.Email,
+                    RequestDate = model.RequestDate,
+                    PlacesCount = model.PlacesCount,
+                    PhoneNumber = model.PhoneNumber,
+                    RequestedState = model.States,
+                    RequestedCity = model.Cities,
+                    RequestedGarage = model.Garages,
+                };
+                var result = await UserManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
+                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                    // Send an email with this link
+                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    
+                    //System.Web.Security.Roles.AddUserToRole(model.Email, GlobalConstants.PendingClientRole);
+                    return RedirectToAction("Index", "Home");
+                }
+                AddErrors(result);
+            }
+
+            // If we got this far, something failed, redisplay form
+            return PartialView(model);
+        }
+        [AllowAnonymous]
+        public ActionResult PersonalRegister()
+        {
+            return PartialView("PersonalRegister");
+        }
+
+        [AllowAnonymous]
+        public ActionResult CompanyRegister()
+        {
+            return PartialView("CompanyRegister");
         }
 
         //
@@ -436,14 +512,22 @@
             return Json(allStates, JsonRequestBehavior.AllowGet);
         }
 
+        //[AllowAnonymous]
+        //public JsonResult GetCascadeStateCompany()
+        //{
+        //    var allStates = this.data.States.All().ProjectTo<StateMenuRegisterItemViewModel>();
+
+        //    return Json(allStates, JsonRequestBehavior.AllowGet);
+        //}
+
         [AllowAnonymous]
-        public JsonResult GetCascadeCities(Guid? state)
+        public JsonResult GetCascadeCities(Guid? states)
         {
             var allCities = this.data.Cities.All().ProjectTo<CityMenuRegisterItemViewModel>();
             
-            if (state != null)
+            if (states != null)
             {
-                allCities = allCities.Where(p => p.Id == state);
+                allCities = allCities.Where(p => p.StateId == states);
             }
 
             return Json(allCities, JsonRequestBehavior.AllowGet);
@@ -456,7 +540,7 @@
 
             if (cities != null)
             {
-                allGarages = allGarages.Where(p => p.Id == cities);
+                allGarages = allGarages.Where(p => p.CityId == cities);
             }
 
             return Json(allGarages, JsonRequestBehavior.AllowGet);

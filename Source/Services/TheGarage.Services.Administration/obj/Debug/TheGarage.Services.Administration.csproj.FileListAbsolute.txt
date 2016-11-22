@@ -37,3 +37,42 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Adminis
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Administration\obj\Debug\TheGarage.Services.Administration.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Administration\obj\Debug\TheGarage.Services.Administration.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Administration\obj\Debug\TheGarage.Services.Administration.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Services.Administration.dll.config
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Services.Administration.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Services.Administration.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\EntityFramework.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\EntityFramework.SqlServer.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Security.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Newtonsoft.Json.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Owin.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Data.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Data.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Data.Models.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Services.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Data.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Data.Models.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Data.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\TheGarage.Services.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\EntityFramework.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\EntityFramework.SqlServer.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Security.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\bin\Debug\Newtonsoft.Json.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\obj\Debug\TheGarage.Services.Administration.csprojResolveAssemblyReference.cache
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\obj\Debug\TheGarage.Services.Administration.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Administration\obj\Debug\TheGarage.Services.Administration.pdb

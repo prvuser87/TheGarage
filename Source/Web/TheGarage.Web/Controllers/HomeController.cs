@@ -16,7 +16,7 @@ namespace TheGarage.Web.Controllers
         }
         public ActionResult Index()
         {
-            if (this.User.IsInRole(GlobalConstants.PendingClientRole))
+            if (false)//this.User.IsInRole(GlobalConstants.PendingClientRole))
             {
                 return RedirectToAction("Index", "Details", new { area = "Clients" });
             }else

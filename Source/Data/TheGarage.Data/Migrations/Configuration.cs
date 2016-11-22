@@ -114,6 +114,9 @@ namespace TheGarage.Data.Migrations
             roleManager.Create(new IdentityRole { Name = GlobalConstants.CompanyManagerRole });
             roleManager.Create(new IdentityRole { Name = GlobalConstants.GarageManagerRole });
             roleManager.Create(new IdentityRole { Name = GlobalConstants.AdminRole });
+            //roleManager.Create(new IdentityRole { Name = GlobalConstants.PendingClientRole });
+            //roleManager.Create(new IdentityRole { Name = GlobalConstants.ClientRole });
+
 
             context.SaveChanges();
         }

@@ -1,0 +1,152 @@
+﻿@model TheGarage.Web.Models.RegisterViewModel
+
+
+@using (Html.BeginForm("PersonalRegister", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Create personal account</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group k-content">
+        @Html.LabelFor(m => m.States, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @(Html.Kendo().DropDownList()
+              .Name("statesP")
+              .OptionLabel("Select state...")
+              .DataTextField("Name")
+              .DataValueField("Id")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("GetCascadeState", "Account");
+                  });
+              })
+            )
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cities, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @(Html.Kendo().DropDownList()
+              .Name("citiesP")
+              .OptionLabel("Select city...")
+              .DataTextField("Name")
+              .DataValueField("Id")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("GetCascadeCities", "Account")
+                          .Data("filterCitiesP");
+                  })
+                  .ServerFiltering(true);
+              })
+              .Enable(false)
+              .AutoBind(false)
+              .CascadeFrom("statesP")
+            )
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Garages, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @(Html.Kendo().DropDownList()
+              .Name("garagesP")
+              .OptionLabel("Select garage...")
+              .DataTextField("Name")
+              .DataValueField("Id")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("GetCascadeGarages", "Account")
+                          .Data("filterGaragesP");
+                  })
+                  .ServerFiltering(true);
+              })
+              .Enable(false)
+              .AutoBind(false)
+              .CascadeFrom("citiesP")
+            )
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.RequestDate, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.RequestDate, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PlacesCount, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.PlacesCount, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+}
+
+
+
+@*<script>
+    $(document).ready(function () {
+        var states = $("#states").data("kendoDropDownList"),
+            cities = $("#cities").data("kendoDropDownList"),
+            garages = $("#garages").data("kendoDropDownList");
+
+        $("#get").click(function () {
+            var stateInfo = "\nState: { id: " + states.value() + ", name: " + states.text() + " }",
+                cityInfo = "\nCity: { id: " + cities.value() + ", name: " + cities.text() + " }",
+                garageInfo = "\nGarage: { id: " + garages.value() + ", name: " + garages.text() + " }";
+
+           
+        });
+    });
+</script>*@
+

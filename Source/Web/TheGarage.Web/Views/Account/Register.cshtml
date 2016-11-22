@@ -4,8 +4,66 @@
 }
 
 <h2>@ViewBag.Title.</h2>
+<div class="wrapper">
+    @(Html.Kendo().TabStrip()
+              .Name("tabstrip")
+              .Items(tabstrip =>
+              {
+                  tabstrip.Add().Text("Personal Registration")
+                      .Selected(true)
+                      .LoadContentFrom("PersonalRegister", "Account");
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                  tabstrip.Add().Text("Company Registration")
+                      .LoadContentFrom("CompanyRegister", "Account");
+
+              })
+)
+</div>
+
+@*<style>
+    .wrapper {
+        height: 455px;
+        margin: 20px auto;
+        padding: 20px 0 0 0;
+        background: url('@Url.Content("~/Content/web/tabstrip/bmw.png")') no-repeat center 60px transparent;
+    }
+    #tabstrip {
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    #tabstrip .k-content
+    {
+        height: 320px;
+        overflow: auto;
+    }
+    .specification {
+        max-width: 670px;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .specification dt, dd {
+        max-width: 140px;
+        float: left;
+        margin: 0;
+        padding: 5px 0 8px 0;
+    }
+    .specification dt {
+        clear: left;
+        width: 100px;
+        margin-right: 7px;
+        padding-right: 0;
+        opacity: 0.7;
+    }
+    .specification:after, .wrapper:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+</style>*@
+
+@*@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
@@ -125,8 +183,45 @@
 <script>
     $(document).ready(function () {
         var states = $("#states").data("kendoDropDownList"),
-            cities = $("#cities").data("kendoDropDownList")
-            garages = $("#garages").data("kendoDropDownList")
+            cities = $("#cities").data("kendoDropDownList"),
+            garages = $("#garages").data("kendoDropDownList");
+
+        $("#get").click(function () {
+            var stateInfo = "\nState: { id: " + states.value() + ", name: " + states.text() + " }",
+                cityInfo = "\nCity: { id: " + cities.value() + ", name: " + cities.text() + " }",
+                garageInfo = "\nGarage: { id: " + garages.value() + ", name: " + garages.text() + " }";
+
+           
+        });
     });
+</script>*@
+<script>
+            function filterCities() {
+                return {
+                    states: $("#states").val()
+                };
+            }
 </script>
 
+<script>
+    function filterGarages() {
+                return {
+                    cities: $("#cities").val()
+                };
+            }
+</script>
+<script>
+            function filterCitiesP() {
+                return {
+                    states: $("#statesP").val()
+                };
+            }
+</script>
+
+<script>
+    function filterGaragesP() {
+                return {
+                    cities: $("#citiesP").val()
+                };
+            }
+</script>

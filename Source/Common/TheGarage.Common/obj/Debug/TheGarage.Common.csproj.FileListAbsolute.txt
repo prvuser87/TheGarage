@@ -7,3 +7,8 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\bin\Debug\T
 C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.csprojResolveAssemblyReference.cache
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Common\TheGarage.Common\bin\Debug\TheGarage.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Common\TheGarage.Common\bin\Debug\TheGarage.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.csprojResolveAssemblyReference.cache
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Common\TheGarage.Common\obj\Debug\TheGarage.Common.pdb

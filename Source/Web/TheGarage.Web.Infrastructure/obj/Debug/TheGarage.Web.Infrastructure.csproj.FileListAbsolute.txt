@@ -46,3 +46,46 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\bi
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Web.Infrastructure.dll.config
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Web.Infrastructure.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Web.Infrastructure.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\AutoMapper.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\AutoMapper.EF6.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\DelegateDecompiler.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\DelegateDecompiler.EntityFramework.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Mono.Reflection.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\PhilosophicalMonkey.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.Helpers.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Data.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Data.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Data.Models.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\WebActivatorEx.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Data.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Data.Models.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\TheGarage.Data.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\AutoMapper.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\AutoMapper.EF6.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.Helpers.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.csprojResolveAssemblyReference.cache
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Infrastructure\obj\Debug\TheGarage.Web.Infrastructure.pdb

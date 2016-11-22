@@ -20,3 +20,21 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\bin\Debug\
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.pdb
 C:\Users\Admin\Source\Repos\TheGarage\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.csprojResolveAssemblyReference.cache
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\TheGarage.Web.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\TheGarage.Web.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.Helpers.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.Mvc.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.Razor.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.WebPages.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.WebPages.Razor.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.Helpers.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.Mvc.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.Razor.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.WebPages.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\bin\Debug\System.Web.WebPages.Razor.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.csprojResolveAssemblyReference.cache
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Web\TheGarage.Web.Common\obj\Debug\TheGarage.Web.Common.pdb

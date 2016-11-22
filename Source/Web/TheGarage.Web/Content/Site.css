@@ -17,15 +17,16 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 20%;
-}
-.k-dropdown{
-    width: 20%;
+
+.k-dropdown-wrap{
+    width:85%;
 }
 .k-readonly
 {
     color: gray;
+}
+
+.form-group {
+    max-width: 20%;
+    
 }

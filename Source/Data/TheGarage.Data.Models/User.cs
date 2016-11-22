@@ -33,7 +33,7 @@
 
         public string City { get; set; }
 
-        public string Phone { get; set; }
+       // public int PhoneNumber { get; set; }
 
         public string About { get; set; }
 
@@ -60,7 +60,7 @@
         public int PlacesCount { get; set; }
 
         public string CustomMessage { get; set; }
-
+        
         public DateTime RequestDate { get; set; }
 
         public virtual Client Client { get; set; }

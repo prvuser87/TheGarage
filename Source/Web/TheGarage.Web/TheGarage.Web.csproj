@@ -292,6 +292,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CityMenuRegisterItemViewModel.cs" />
+    <Compile Include="Models\CompanyRegisterViewModel.cs" />
     <Compile Include="Models\StateMenuRegisterItemViewModel.cs" />
     <Compile Include="Models\GarageMenuRegisterItemViewModel.cs" />
     <Compile Include="Models\GarageMenuItemViewModel.cs" />
@@ -503,7 +504,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -540,6 +543,9 @@
     <Content Include="Scripts\Kendo\kendo.aspnetmvc.min.js.map" />
     <Content Include="Scripts\Kendo\kendo.web.min.js.map" />
     <Content Include="Scripts\Kendo\jquery.min.map" />
+    <Content Include="Views\Account\TabStrip.cshtml" />
+    <Content Include="Views\Shared\PersonalRegister.cshtml" />
+    <Content Include="Views\Shared\CompanyRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -572,6 +578,7 @@
     <Folder Include="Content\Kendo\Silver\" />
     <Folder Include="Content\Kendo\textures\" />
     <Folder Include="Content\Kendo\Uniform\" />
+    <Folder Include="Views\Company\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

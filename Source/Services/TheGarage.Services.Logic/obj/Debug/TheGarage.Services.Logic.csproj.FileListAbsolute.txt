@@ -21,3 +21,26 @@ C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Logic\b
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Logic\obj\Debug\TheGarage.Services.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Logic\obj\Debug\TheGarage.Services.Logic.dll
 C:\Users\Admin\Source\Repos\TheGarage\Source\Services\TheGarage.Services.Logic\obj\Debug\TheGarage.Services.Logic.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Services.Logic.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Services.Logic.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\AutoMapper.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\Ninject.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Services.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Data.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Data.Models.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\EntityFramework.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Data.Common.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Services.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\AutoMapper.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\Ninject.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Data.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Data.Models.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\EntityFramework.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\TheGarage.Data.Common.pdb
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\obj\Debug\TheGarage.Services.Logic.csprojResolveAssemblyReference.cache
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\obj\Debug\TheGarage.Services.Logic.dll
+E:\GARAGES 1ST STEP REGISTRATION\TheGarage-master\Source\Services\TheGarage.Services.Logic\obj\Debug\TheGarage.Services.Logic.pdb
